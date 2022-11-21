@@ -1,5 +1,10 @@
 .taskbar {
-  border: 1px solid #000;
   width: 100%;
-  padding: 10px;
+  height: 35px;
+  background: silver;
+  border-top: 2px solid #fafafa;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
