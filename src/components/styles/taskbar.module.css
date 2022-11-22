@@ -5,6 +5,12 @@
   border-top: 2px solid #fafafa;
   z-index: 100;
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  padding: 5px;
+}
+
+.programList {
+  display: flex;
+  list-style: none;
 }

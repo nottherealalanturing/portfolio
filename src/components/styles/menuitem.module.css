@@ -1,0 +1,60 @@
+.item {
+  border-radius: 0;
+  width: 130px;
+  height: 30px;
+  border-top: 2px solid #dfdfdf;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  border-left: 2px solid #dfdfdf;
+  box-shadow: 0.5px 0.5px #000;
+  margin: 1px;
+  padding: 2px;
+  min-height: auto;
+  max-width: 130px;
+  min-width: auto;
+  line-height: 14px;
+  text-decoration: rgb(0, 0, 0);
+  word-spacing: 0px;
+  background-color: #c0c0c0;
+  background-position: 0% 0%;
+  color: #000000;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.clicked {
+  border-radius: 0;
+  width: 130px;
+  height: 30px;
+  border-top: 2px solid #dfdfdf;
+  border-right: 2px solid #808080;
+  border-bottom: 2px solid #808080;
+  border-left: 2px solid #dfdfdf;
+  box-shadow: 0.5px 0.5px #000;
+  margin: 1px;
+  padding: 2px;
+  min-height: auto;
+  max-width: 130px;
+  min-width: auto;
+  line-height: 14px;
+  text-decoration: rgb(0, 0, 0);
+  word-spacing: 0px;
+  background-color: #832b2b;
+  background-position: 0% 0%;
+  color: #000000;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+}

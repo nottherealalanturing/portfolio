@@ -1,0 +1,14 @@
+.divider {
+  height: 25px;
+  width: 0px;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #808080;
+  margin: 2px 0 2px 0;
+  font-family: serif;
+  font-size: 16px;
+  text-decoration: rgb(0, 0, 0);
+  word-spacing: 0px;
+  background-color: #ffffff;
+  background-position: 0% 0%;
+  color: #000000;
+}

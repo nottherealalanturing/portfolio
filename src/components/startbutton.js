@@ -6,6 +6,7 @@ import { ReactComponent as Logo } from '../assets/icons/windows_98_logo.svg';
 const StartButton = () => (
   <button className={styles.startbtn} type="button">
     <Logo className={styles.logo} />
+    Start
   </button>
 );
 

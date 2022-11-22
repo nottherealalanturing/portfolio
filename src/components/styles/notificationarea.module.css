@@ -1,0 +1,29 @@
+.notificationarea {
+  width: 80px;
+  margin: 1px;
+  height: 25px;
+  background: silver;
+  border-right: 1.5px solid #fafafa;
+  border-bottom: 1.5px solid #fafafa;
+  border-top: 1.5px solid #5a5a5a;
+  border-left: 1.5px solid #5a5a5a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.time {
+  font-size: 14px;
+}
+
+.icons {
+  width: 15px;
+  height: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
