@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import menuitemsReducer from './menuitemsSlice';
+import taskbarReducer from './taskbar/taskbarSlice';
 
 const store = configureStore({
   reducer: {
-    menuitems: menuitemsReducer,
+    taskbar: taskbarReducer,
   },
 });
 
