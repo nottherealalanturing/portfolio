@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles/notificationarea.module.css';
 import TaskDivider from './taskdivider';
-import { speakericon } from '../assets/icons/icons';
+import { speakericon } from '../assets/icons';
 
 const Notificationarea = () => {
   const [dateState, setDateState] = useState(new Date());

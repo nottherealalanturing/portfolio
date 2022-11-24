@@ -7,3 +7,8 @@ export { default as settingsicon } from './settings.ico';
 export { default as shuticon } from './shut.ico';
 export { default as winicon } from './w95.ico';
 export { default as speakericon } from './speakers.png';
+export { default as sidebaricon } from './sidebar.png';
+export { default as mailicon } from './mail.png';
+export { default as portfolioicon } from './portfolio.png';
+export { default as bioicon } from './bio.png';
+export { default as resumeicon } from './resume.png';

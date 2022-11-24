@@ -1,0 +1,19 @@
+.frame {
+  width: 50%;
+  position: relative;
+}
+
+.frametitle {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 10px;
+  gap: 5px;
+  padding: 5px;
+}
+
+.frameicon {
+  width: 20px;
+  height: 20px;
+}

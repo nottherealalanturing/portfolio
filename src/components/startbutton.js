@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles/startbtn.module.css';
-import { winicon } from '../assets/icons/icons';
+import { winicon } from '../assets/icons';
 import { clickStart } from '../redux/taskbar/actions';
 
 const StartButton = () => {

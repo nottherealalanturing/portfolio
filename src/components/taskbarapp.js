@@ -12,7 +12,7 @@ const TaskbarApp = ({
 
   return (
     <button
-      className={appstate.open ? styles.item : styles.minimized}
+      className={appstate.open ? styles.active : styles.notactive}
       type="button"
       onClick={() => dispatcher(action(name))}
     >
