@@ -2,9 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import StartButton from './startbutton';
 import styles from './styles/taskbar.module.css';
-import Mail from '../assets/icons/mail.png';
-import Bio from '../assets/icons/bio.png';
-import Folder from '../assets/icons/opensource.png';
+import { mailicon, bioicon, portfolioicon, resumeicon } from '../assets/icons';
 import TaskbarApp from './taskbarapp';
 import Notificationarea from './notificationarea';
 import TaskDivider from './taskdivider';
@@ -22,23 +20,30 @@ const Taskbar = () => {
           <TaskDivider />
           <TaskbarApp
             name="about"
-            icon={Bio}
+            icon={bioicon}
             altText="icon"
-            appstate={taskbarapps.mail}
+            appstate={taskbarapps.about}
             action={minimize}
           />
           <TaskbarApp
             name="mail"
-            icon={Mail}
+            icon={mailicon}
             altText="icon"
             appstate={taskbarapps.mail}
             action={maximize}
           />
           <TaskbarApp
             name="portfolio"
-            icon={Folder}
+            icon={portfolioicon}
             altText="icon"
-            appstate={taskbarapps.mail}
+            appstate={taskbarapps.projects}
+            action={close}
+          />
+          <TaskbarApp
+            name="resume"
+            icon={resumeicon}
+            altText="icon"
+            appstate={taskbarapps.resume}
             action={close}
           />
         </ul>

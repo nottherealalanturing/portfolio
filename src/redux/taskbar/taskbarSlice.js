@@ -22,6 +22,12 @@ const initialState = {
     closed: true,
     top: false,
   },
+  resume: {
+    open: false,
+    minimize: false,
+    closed: true,
+    top: false,
+  },
   startbutton: false,
 };
 
@@ -32,6 +38,26 @@ const taskbarReducer = createReducer(initialState, (builder) => {
     })
 
     .addMatcher(
+      (action) => action.type.endsWith('focusApp'),
+      (state, action) => {
+        state.about.top = false;
+        state.mail.top = false;
+        state.projects.top = false;
+        state.resume.top = false;
+        state.about.open = false;
+        state.mail.open = false;
+        state.resume.open = false;
+        state.projects.open = false;
+        state[action.payload.appname] = {
+          open: true,
+          minimize: false,
+          closed: false,
+          top: true,
+        };
+      }
+    )
+
+    .addMatcher(
       (action) => action.type.endsWith('minimize'),
       (state, action) => {
         state[action.payload.appname] = {
@@ -40,7 +66,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: false,
           top: false,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('maximize'),
@@ -48,13 +74,14 @@ const taskbarReducer = createReducer(initialState, (builder) => {
         state.about.top = false;
         state.mail.top = false;
         state.projects.top = false;
+        state.resume.top = false;
         state[action.payload.appname] = {
           open: true,
           minimize: false,
           closed: false,
           top: true,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('close'),
@@ -65,7 +92,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: true,
           top: false,
         };
-      },
+      }
     );
 });
 

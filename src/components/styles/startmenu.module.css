@@ -14,12 +14,16 @@
   padding: 2px;
 }
 
-.text {
-  writing-mode: sideways-lr;
-  text-align: start;
+.sidebar {
   width: 25px;
   background: #7b7d7b;
   height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sidebarimg {
+  width: 18px;
 }
 
 .listcontainer {

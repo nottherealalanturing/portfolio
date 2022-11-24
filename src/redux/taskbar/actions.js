@@ -19,3 +19,9 @@ export const close = createAction('close', (appname) => ({
 }));
 
 export const clickStart = createAction('clickStart');
+
+export const focusApp = createAction('focusApp', (appname) => ({
+  payload: {
+    appname,
+  },
+}));

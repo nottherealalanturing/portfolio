@@ -5,14 +5,12 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import styles from './styles/taskbarapp.module.css';
 
-const TaskbarApp = ({
-  icon, name, altText, appstate, action,
-}) => {
+const TaskbarApp = ({ icon, name, altText, appstate, action }) => {
   const dispatcher = useDispatch();
 
   return (
     <button
-      className={appstate.open ? styles.item : styles.minimized}
+      className={appstate.open ? styles.active : styles.notactive}
       type="button"
       onClick={() => dispatcher(action(name))}
     >

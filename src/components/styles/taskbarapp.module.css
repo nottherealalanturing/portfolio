@@ -1,4 +1,4 @@
-.item {
+.notactive {
   border-radius: 0;
   width: 130px;
   height: 26px;
@@ -28,7 +28,7 @@
   margin-top: 3px;
 }
 
-.minimized {
+.active {
   background-position: 50% 50%;
   /* stylelint-disable */
   background: repeating-conic-gradient(#bdbebd 0 25%, #fff 0 50%) 50%/2px 2px;
