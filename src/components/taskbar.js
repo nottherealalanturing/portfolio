@@ -2,7 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import StartButton from './startbutton';
 import styles from './styles/taskbar.module.css';
-import { mailicon, bioicon, portfolioicon, resumeicon } from '../assets/icons';
+import {
+  mailicon, bioicon, portfolioicon, resumeicon,
+} from '../assets/icons';
 import TaskbarApp from './taskbarapp';
 import Notificationarea from './notificationarea';
 import TaskDivider from './taskdivider';

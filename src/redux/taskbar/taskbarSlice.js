@@ -54,7 +54,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: false,
           top: true,
         };
-      }
+      },
     )
 
     .addMatcher(
@@ -66,7 +66,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: false,
           top: false,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('maximize'),
@@ -81,7 +81,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: false,
           top: true,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('close'),
@@ -92,7 +92,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: true,
           top: false,
         };
-      }
+      },
     );
 });
 

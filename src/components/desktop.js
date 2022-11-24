@@ -1,7 +1,9 @@
 import React from 'react';
 import styles from './styles/desktop.module.css';
 import WindowFrame from './windowframe';
-import { mailicon, portfolioicon, bioicon, resumeicon } from '../assets/icons';
+import {
+  mailicon, portfolioicon, bioicon, resumeicon,
+} from '../assets/icons';
 
 const Desktop = () => (
   <div className={styles.desktopArea}>
