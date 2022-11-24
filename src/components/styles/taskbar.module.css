@@ -1,0 +1,17 @@
+.taskbar {
+  width: 100%;
+  height: 35px;
+  background: silver;
+  border-top: 2px solid #fafafa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.programList {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
