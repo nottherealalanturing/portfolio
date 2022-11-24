@@ -1,60 +1,78 @@
 .item {
   border-radius: 0;
   width: 130px;
-  height: 30px;
+  height: 26px;
   border-top: 2px solid #dfdfdf;
   border-right: 2px solid #808080;
   border-bottom: 2px solid #808080;
   border-left: 2px solid #dfdfdf;
   box-shadow: 0.5px 0.5px #000;
-  margin: 1px;
   padding: 2px;
   min-height: auto;
   max-width: 130px;
   min-width: auto;
   line-height: 14px;
   text-decoration: rgb(0, 0, 0);
-  word-spacing: 0px;
+  word-spacing: 0;
   background-color: #c0c0c0;
   background-position: 0% 0%;
-  color: #000000;
+  color: #000;
   overflow: hidden;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
   font-size: 13px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 3px;
 }
 
 .minimized {
+  background-position: 50% 50%;
+  /* stylelint-disable */
+  background: repeating-conic-gradient(#bdbebd 0 25%, #fff 0 50%) 50%/2px 2px;
+  /* stylelint-enable */
+  color: #000;
+  display: flex;
   border-radius: 0;
   width: 130px;
-  height: 30px;
-  border-top: 2px solid #dfdfdf;
-  border-right: 2px solid #808080;
-  border-bottom: 2px solid #808080;
-  border-left: 2px solid #dfdfdf;
+  height: 26px;
   box-shadow: 0.5px 0.5px #000;
-  margin: 1px;
   padding: 2px;
   min-height: auto;
   max-width: 130px;
   min-width: auto;
   line-height: 14px;
   text-decoration: rgb(0, 0, 0);
-  word-spacing: 0px;
-  background-color: #832b2b;
-  background-position: 0% 0%;
-  color: #000000;
+  word-spacing: 0;
   overflow: hidden;
-  display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
   font-size: 13px;
+  border-top: 1px solid #000;
+  border-right: 1px solid #fafafa;
+  border-bottom: 1px solid #fafafa;
+  border-left: 1px solid #000;
+  transform: none;
+  transition: all 0s ease 0s;
+  outline: rgb(255, 0, 0) solid 1px;
+  box-sizing: border-box;
+  border-top-left-radius: 0.5px;
+  border-top-right-radius: 0.5px;
+  border-bottom-left-radius: 0.5px;
+  border-bottom-right-radius: 0.5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-top: 3px;
 }
 
 .icon {
   width: 18px;
   height: 18px;
+}
+
+.name {
+  text-transform: capitalize;
 }

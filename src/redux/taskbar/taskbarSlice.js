@@ -1,5 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createReducer } from '@reduxjs/toolkit';
+import { clickStart } from './actions';
 // import { minimize, maximize, close } from './actions';
 
 const initialState = {
@@ -9,7 +10,7 @@ const initialState = {
     closed: true,
     top: false,
   },
-  aboutme: {
+  about: {
     open: false,
     minimize: false,
     closed: true,
@@ -21,10 +22,14 @@ const initialState = {
     closed: true,
     top: false,
   },
+  startbutton: false,
 };
 
 const taskbarReducer = createReducer(initialState, (builder) => {
   builder
+    .addCase(clickStart, (state) => {
+      state.startbutton = !state.startbutton;
+    })
 
     .addMatcher(
       (action) => action.type.endsWith('minimize'),
@@ -35,12 +40,12 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: false,
           top: false,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('maximize'),
       (state, action) => {
-        state.aboutme.top = false;
+        state.about.top = false;
         state.mail.top = false;
         state.projects.top = false;
         state[action.payload.appname] = {
@@ -49,7 +54,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: false,
           top: true,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('close'),
@@ -60,7 +65,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           closed: true,
           top: false,
         };
-      }
+      },
     );
 });
 

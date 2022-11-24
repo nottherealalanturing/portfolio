@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './styles/notificationarea.module.css';
-import Speaker from '../assets/icons/speakers.png';
 import TaskDivider from './taskdivider';
+import { speakericon } from '../assets/icons/icons';
 
 const Notificationarea = () => {
   const [dateState, setDateState] = useState(new Date());
@@ -13,7 +13,7 @@ const Notificationarea = () => {
     <div className={styles.container}>
       <TaskDivider />
       <div className={styles.notificationarea}>
-        <img src={Speaker} alt="speaker icon" className={styles.icons} />
+        <img src={speakericon} alt="speaker icon" className={styles.icons} />
         <p className={styles.time}>
           {dateState.toLocaleString('en-US', {
             hour: 'numeric',

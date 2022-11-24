@@ -1,0 +1,9 @@
+export { default as docicon } from './doc.ico';
+export { default as findicon } from './find.ico';
+export { default as helpicon } from './help.ico';
+export { default as progicon } from './prog.ico';
+export { default as runicon } from './run.ico';
+export { default as settingsicon } from './settings.ico';
+export { default as shuticon } from './shut.ico';
+export { default as winicon } from './w95.ico';
+export { default as speakericon } from './speakers.png';

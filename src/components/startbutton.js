@@ -1,13 +1,25 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles/startbtn.module.css';
+import { winicon } from '../assets/icons/icons';
+import { clickStart } from '../redux/taskbar/actions';
 
-import { ReactComponent as Logo } from '../assets/icons/windows_98_logo.svg';
+const StartButton = () => {
+  const dispatcher = useDispatch();
+  const startButtonState = useSelector((state) => state.taskbar.startbutton);
 
-const StartButton = () => (
-  <button className={styles.startbtn} type="button">
-    <Logo className={styles.logo} />
-    Start
-  </button>
-);
+  return (
+    <button
+      className={
+        startButtonState ? styles.startbtnclicked : styles.startbtnunclicked
+      }
+      type="button"
+      onClick={() => dispatcher(clickStart())}
+    >
+      <img src={winicon} alt="start button" className={styles.logo} />
+      Start
+    </button>
+  );
+};
 
 export default StartButton;

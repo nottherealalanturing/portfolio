@@ -3,7 +3,6 @@
   height: 35px;
   background: silver;
   border-top: 2px solid #fafafa;
-  z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,4 +12,6 @@
 .programList {
   display: flex;
   list-style: none;
+  justify-content: center;
+  align-items: center;
 }

@@ -17,3 +17,5 @@ export const close = createAction('close', (appname) => ({
     appname,
   },
 }));
+
+export const clickStart = createAction('clickStart');

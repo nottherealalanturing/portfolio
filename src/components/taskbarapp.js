@@ -3,9 +3,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import styles from './styles/menuitem.module.css';
+import styles from './styles/taskbarapp.module.css';
 
-const MenuItem = ({ icon, name, altText, appstate, action }) => {
+const TaskbarApp = ({
+  icon, name, altText, appstate, action,
+}) => {
   const dispatcher = useDispatch();
 
   return (
@@ -20,7 +22,7 @@ const MenuItem = ({ icon, name, altText, appstate, action }) => {
   );
 };
 
-MenuItem.propTypes = {
+TaskbarApp.propTypes = {
   name: PropTypes.string.isRequired,
   altText: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
@@ -28,4 +30,4 @@ MenuItem.propTypes = {
   action: PropTypes.any,
 };
 
-export default MenuItem;
+export default TaskbarApp;
