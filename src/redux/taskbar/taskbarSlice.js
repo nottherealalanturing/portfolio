@@ -9,24 +9,28 @@ const initialState = {
     minimize: false,
     closed: true,
     top: false,
+    fullscreen: false,
   },
   about: {
     open: false,
     minimize: false,
     closed: true,
     top: false,
+    fullscreen: false,
   },
-  projects: {
+  portfolio: {
     open: false,
     minimize: false,
     closed: true,
     top: false,
+    fullscreen: false,
   },
   resume: {
     open: false,
     minimize: false,
     closed: true,
     top: false,
+    fullscreen: false,
   },
   startbutton: false,
 };
@@ -42,17 +46,31 @@ const taskbarReducer = createReducer(initialState, (builder) => {
       (state, action) => {
         state.about.top = false;
         state.mail.top = false;
-        state.projects.top = false;
+        state.portfolio.top = false;
         state.resume.top = false;
         state.about.open = false;
         state.mail.open = false;
         state.resume.open = false;
-        state.projects.open = false;
+        state.portfolio.open = false;
+        const isfullscreen = state[action.payload.appname].fullscreen;
         state[action.payload.appname] = {
           open: true,
           minimize: false,
           closed: false,
           top: true,
+          fullscreen: isfullscreen,
+        };
+      },
+    )
+    .addMatcher(
+      (action) => action.type.endsWith('launchApp'),
+      (state, action) => {
+        state[action.payload.appname] = {
+          open: true,
+          minimize: false,
+          closed: false,
+          top: true,
+          fullscreen: false,
         };
       },
     )
@@ -60,11 +78,16 @@ const taskbarReducer = createReducer(initialState, (builder) => {
     .addMatcher(
       (action) => action.type.endsWith('minimize'),
       (state, action) => {
+        const isopen = state[action.payload.appname].open;
+        const istop = state[action.payload.appname].top;
+        const isminimize = state[action.payload.appname].minimize;
+        const isfullscreen = state[action.payload.appname].fullscreen;
         state[action.payload.appname] = {
-          open: false,
-          minimize: true,
+          open: !isopen,
+          minimize: !isminimize,
           closed: false,
-          top: false,
+          top: !istop,
+          fullscreen: isfullscreen,
         };
       },
     )
@@ -73,13 +96,15 @@ const taskbarReducer = createReducer(initialState, (builder) => {
       (state, action) => {
         state.about.top = false;
         state.mail.top = false;
-        state.projects.top = false;
+        state.portfolio.top = false;
         state.resume.top = false;
+        const isfullscreen = state[action.payload.appname].fullscreen;
         state[action.payload.appname] = {
           open: true,
           minimize: false,
           closed: false,
           top: true,
+          fullscreen: isfullscreen,
         };
       },
     )
@@ -91,6 +116,22 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           minimize: false,
           closed: true,
           top: false,
+          fullscreen: false,
+        };
+      },
+    )
+    .addMatcher(
+      (action) => action.type.endsWith('fullscreen'),
+      (state, action) => {
+        const isfullscreen = state[action.payload.appname].fullscreen;
+        const isopen = state[action.payload.appname].open;
+        const istop = state[action.payload.appname].top;
+        state[action.payload.appname] = {
+          open: isopen,
+          minimize: false,
+          closed: false,
+          top: istop,
+          fullscreen: !isfullscreen,
         };
       },
     );
