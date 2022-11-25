@@ -1,6 +1,10 @@
 .frame {
-  width: 50%;
+  width: 500px;
   position: relative;
+}
+
+.frametitlebar {
+  display: flex;
 }
 
 .frametitle {
@@ -16,4 +20,12 @@
 .frameicon {
   width: 20px;
   height: 20px;
+}
+
+.firstbar {
+  width: 90%;
+}
+
+.secondbar {
+  width: 10%;
 }

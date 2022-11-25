@@ -8,7 +8,12 @@ import Draggable from 'react-draggable';
 import PropTypes from 'prop-types';
 import '98.css';
 import styles from './styles/windowframe.module.css';
-import { focusApp } from '../redux/taskbar/actions';
+import {
+  close,
+  focusApp,
+  minimize,
+  fullscreen,
+} from '../redux/taskbar/actions';
 
 const WindowFrame = ({
   children,
@@ -17,6 +22,7 @@ const WindowFrame = ({
   handleStop,
   appname,
   icon,
+  isminimize,
 }) => {
   const dispatcher = useDispatch();
   const currentapp = useSelector((state) => state.taskbar[appname]);
@@ -24,7 +30,7 @@ const WindowFrame = ({
     <Draggable
       axis="both"
       handle=".handle"
-      defaultPosition={{ x: 0, y: 0 }}
+      defaultPosition={{ x: 50, y: -190 }}
       position={null}
       grid={[25, 25]}
       scale={1}
@@ -34,22 +40,50 @@ const WindowFrame = ({
     >
       <div
         className={['window', styles.frame]}
-        onClick={() => dispatcher(focusApp(appname))}
         style={{
           zIndex: currentapp.top ? 1 : 0,
+          display: isminimize ? 'block' : 'none',
         }}
       >
-        <div className="title-bar handle">
-          <div className="title-bar-text">
-            <div className={styles.frametitle}>
-              <img src={icon} alt={appname} className={styles.frameicon} />
-              {appname}
+        <div className="title-bar">
+          <div
+            className="handle"
+            onClick={() => dispatcher(focusApp(appname))}
+            style={{
+              width: '90%',
+            }}
+          >
+            <div className="title-bar-text">
+              <div className={styles.frametitle}>
+                <img src={icon} alt={appname} className={styles.frameicon} />
+                {appname}
+              </div>
             </div>
           </div>
-          <div className="title-bar-controls">
-            <button aria-label="Minimize"></button>
-            <button aria-label="Maximize"></button>
-            <button aria-label="Close"></button>
+          <div
+            style={{
+              width: '10%',
+            }}
+          >
+            <div className="title-bar-controls" style={{ display: 'block' }}>
+              <button
+                aria-label="Minimize"
+                onClick={() => dispatcher(minimize(appname))}
+                style={{ float: 'left' }}
+              >
+              </button>
+              <button
+                aria-label="Maximize"
+                onClick={() => dispatcher(fullscreen(appname))}
+                style={{ float: 'left' }}
+              >
+              </button>
+              <button
+                aria-label="Close"
+                onClick={() => dispatcher(close(appname))}
+              >
+              </button>
+            </div>
           </div>
         </div>
         <div className="window-body" style={{ cursor: 'default' }}>
@@ -67,6 +101,7 @@ WindowFrame.propTypes = {
   handleStop: PropTypes.func.isRequired,
   appname: PropTypes.string.isRequired,
   icon: PropTypes.string.isRequired,
+  isminimize: PropTypes.bool.isRequired,
 };
 
 export default WindowFrame;

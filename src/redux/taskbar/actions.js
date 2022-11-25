@@ -25,3 +25,15 @@ export const focusApp = createAction('focusApp', (appname) => ({
     appname,
   },
 }));
+
+export const launchApp = createAction('launchApp', (appname) => ({
+  payload: {
+    appname,
+  },
+}));
+
+export const fullscreen = createAction('fullscreen', (appname) => ({
+  payload: {
+    appname,
+  },
+}));

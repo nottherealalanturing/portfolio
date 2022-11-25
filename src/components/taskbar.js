@@ -1,15 +1,15 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import StartButton from './startbutton';
-import styles from './styles/taskbar.module.css';
 import {
-  mailicon, bioicon, portfolioicon, resumeicon,
+  bioicon, mailicon, portfolioicon, resumeicon,
 } from '../assets/icons';
-import TaskbarApp from './taskbarapp';
+import { minimize } from '../redux/taskbar/actions';
 import Notificationarea from './notificationarea';
-import TaskDivider from './taskdivider';
-import { maximize, minimize, close } from '../redux/taskbar/actions';
+import StartButton from './startbutton';
 import StartMenu from './startmenu';
+import styles from './styles/taskbar.module.css';
+import TaskbarApp from './taskbarapp';
+import TaskDivider from './taskdivider';
 
 const Taskbar = () => {
   const taskbarapps = useSelector((state) => state.taskbar);
@@ -20,34 +20,42 @@ const Taskbar = () => {
         <ul className={styles.programList}>
           <StartButton />
           <TaskDivider />
-          <TaskbarApp
-            name="about"
-            icon={bioicon}
-            altText="icon"
-            appstate={taskbarapps.about}
-            action={minimize}
-          />
-          <TaskbarApp
-            name="mail"
-            icon={mailicon}
-            altText="icon"
-            appstate={taskbarapps.mail}
-            action={maximize}
-          />
-          <TaskbarApp
-            name="portfolio"
-            icon={portfolioicon}
-            altText="icon"
-            appstate={taskbarapps.projects}
-            action={close}
-          />
-          <TaskbarApp
-            name="resume"
-            icon={resumeicon}
-            altText="icon"
-            appstate={taskbarapps.resume}
-            action={close}
-          />
+          {!taskbarapps.about.closed && (
+            <TaskbarApp
+              name="about"
+              icon={bioicon}
+              altText="icon"
+              appstate={taskbarapps.about}
+              action={minimize}
+            />
+          )}
+          {!taskbarapps.mail.closed && (
+            <TaskbarApp
+              name="mail"
+              icon={mailicon}
+              altText="icon"
+              appstate={taskbarapps.mail}
+              action={minimize}
+            />
+          )}
+          {!taskbarapps.portfolio.closed && (
+            <TaskbarApp
+              name="portfolio"
+              icon={portfolioicon}
+              altText="icon"
+              appstate={taskbarapps.portfolio}
+              action={minimize}
+            />
+          )}
+          {!taskbarapps.resume.closed && (
+            <TaskbarApp
+              name="resume"
+              icon={resumeicon}
+              altText="icon"
+              appstate={taskbarapps.resume}
+              action={minimize}
+            />
+          )}
         </ul>
 
         <Notificationarea />
