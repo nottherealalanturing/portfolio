@@ -1,6 +1,9 @@
 .frame {
   width: 500px;
   position: relative;
+  border-top: 2px solid #fafafa;
+  border-right: 1px solid #5a5a5a;
+  border-bottom: 1px solid #5a5a5a;
 }
 
 .frametitlebar {

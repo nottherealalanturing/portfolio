@@ -1,7 +1,3 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Draggable from 'react-draggable';
@@ -30,7 +26,7 @@ const WindowFrame = ({
     <Draggable
       axis="both"
       handle=".handle"
-      defaultPosition={{ x: 50, y: -190 }}
+      defaultPosition={{ x: 150, y: -190 }}
       position={null}
       grid={[25, 25]}
       scale={1}
@@ -52,6 +48,7 @@ const WindowFrame = ({
             style={{
               width: '90%',
             }}
+            aria-hidden="true"
           >
             <div className="title-bar-text">
               <div className={styles.frametitle}>
@@ -70,19 +67,20 @@ const WindowFrame = ({
                 aria-label="Minimize"
                 onClick={() => dispatcher(minimize(appname))}
                 style={{ float: 'left' }}
-              >
-              </button>
+                type="button"
+              />
               <button
                 aria-label="Maximize"
                 onClick={() => dispatcher(fullscreen(appname))}
                 style={{ float: 'left' }}
-              >
-              </button>
+                type="button"
+                disabled
+              />
               <button
                 aria-label="Close"
                 onClick={() => dispatcher(close(appname))}
-              >
-              </button>
+                type="button"
+              />
             </div>
           </div>
         </div>

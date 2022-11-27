@@ -6,6 +6,8 @@ import {
   mailicon, portfolioicon, bioicon, resumeicon,
 } from '../assets/icons';
 import Icon from './Icon';
+import AboutContentArea from './biographycontentarea';
+import MailContentArea from './mailcontentarea';
 
 const Desktop = () => {
   const desktopapp = useSelector((state) => state.taskbar);
@@ -23,7 +25,7 @@ const Desktop = () => {
           icon={mailicon}
           isminimize={!desktopapp.mail.minimize}
         >
-          <p>dbjbasjdbasjbasfasfasknfasjkln</p>
+          <MailContentArea />
         </WindowFrame>
       )}
       {!desktopapp.portfolio.closed && (
@@ -41,7 +43,7 @@ const Desktop = () => {
           icon={bioicon}
           isminimize={!desktopapp.about.minimize}
         >
-          <p>dbjbasjdbasjbasfasfasknfasjkln</p>
+          <AboutContentArea />
         </WindowFrame>
       )}
       {!desktopapp.resume.closed && (

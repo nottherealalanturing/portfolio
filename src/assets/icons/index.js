@@ -6,6 +6,7 @@ export { default as runicon } from './run.ico';
 export { default as settingsicon } from './settings.ico';
 export { default as shuticon } from './shut.ico';
 export { default as winicon } from './w95.ico';
+export { default as envelopeicon } from './envelope.ico';
 export { default as speakericon } from './speakers.png';
 export { default as sidebaricon } from './sidebar.png';
 export { default as mailicon } from './mail.png';

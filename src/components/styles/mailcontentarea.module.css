@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.row {
+  margin: 2px;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid #4d4c4c;
+  background-color: #ffffff;
+}
+
+.btnrow {
+  margin: 5px;
+  padding: 5px;
+  width: 100%;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  justify-content: center;
+}
+
+.mailIcon {
+  height: 20px;
+  width: 20px;
+}
+
+.subjectheader {
+  font-size: 26px;
+  border: none;
+  background-color: #ffffff00;
+}
+
+.label {
+  font-size: 18px;
+  color: #9b9b9b;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+}
+
+.receiverbadge {
+  padding: 5px;
+  background-color: #c2d6fc;
+}
+
+.sendbtn,
+.sendbtn:active,
+.sendbtn:focus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  gap: 5px;
+  width: 100px;
+  height: 30px;
+}
+
+.message {
+  min-height: 200px;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.sender,
+.subject {
+  font-size: 18px;
+}
+
+.receiverbadge {
+  font-size: 18px;
+}
