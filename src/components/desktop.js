@@ -2,12 +2,11 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import styles from './styles/desktop.module.css';
 import WindowFrame from './windowframe';
-import {
-  mailicon, portfolioicon, bioicon, resumeicon,
-} from '../assets/icons';
+import { mailicon, portfolioicon, bioicon, resumeicon } from '../assets/icons';
 import Icon from './Icon';
 import AboutContentArea from './biographycontentarea';
 import MailContentArea from './mailcontentarea';
+import ResumeContentArea from './resumecontentarea';
 
 const Desktop = () => {
   const desktopapp = useSelector((state) => state.taskbar);
@@ -52,7 +51,7 @@ const Desktop = () => {
           icon={resumeicon}
           isminimize={!desktopapp.resume.minimize}
         >
-          <p>dbjbasjdbasjbasfasfasknfasjkln</p>
+          <ResumeContentArea />
         </WindowFrame>
       )}
     </div>

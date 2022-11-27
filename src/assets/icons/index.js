@@ -13,3 +13,5 @@ export { default as mailicon } from './mail.png';
 export { default as portfolioicon } from './portfolio.png';
 export { default as bioicon } from './bio.png';
 export { default as resumeicon } from './resume.png';
+export { default as downloadicon } from './download.png';
+export { default as newtabicon } from './open.png';
