@@ -1,6 +1,10 @@
 import React from 'react';
-import styles from './styles/biocontentarea.module.css';
+import {
+  BsGithub, BsLinkedin, BsMedium, BsMailbox,
+} from 'react-icons/bs';
+import { FaAngellist } from 'react-icons/fa';
 import heroimage from '../assets/images/assadisah.png';
+import styles from './styles/biocontentarea.module.css';
 
 const AboutContentArea = () => (
   <div className={styles.container}>
@@ -9,7 +13,7 @@ const AboutContentArea = () => (
     <h4 className={styles.role} style={{ paddingBottom: '10px' }}>
       Fullstack Developer
     </h4>
-    <h4 className={styles.location}>Kaduna, Nigerian 📍</h4>
+    <h4 className={styles.location}>Kaduna, Nigeria. 📍</h4>
     <div className="badge-grid">
       <img
         className="badge"
@@ -63,16 +67,66 @@ const AboutContentArea = () => (
         src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
       />
     </div>
-    <div className="inner-content">
+    <div className="innercontainer">
       <h3 className={styles.heading}>About Me</h3>
       <p className={styles.paragraph}>
         Hi there, I&apos;m Assad, a creative Full-stack web developer with a
         knack for bringing UX designs to life and a strong ambition to build
         simple, user-friendly solutions with javascript and ruby. I can help you
-        build a product , feature or website Look through some of my work and
+        build a product, feature or website Look through some of my work and
         experience! If you like what you see and have a project you need coded,
         don&apos;t hestiate to contact me.
       </p>
+    </div>
+
+    <div className={styles.contact}>
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://github.com/nottherealalanturing"
+      >
+        <BsGithub size="45px" color="#594c4c" className={styles.contacticons} />
+      </a>
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://www.linkedin.com/in/assadisah/"
+      >
+        <BsLinkedin
+          size="45px"
+          color="#594c4c"
+          className={styles.contacticons}
+        />
+      </a>
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://medium.com/@nottherealalanturing"
+      >
+        <BsMedium size="45px" color="#594c4c" className={styles.contacticons} />
+      </a>
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="mailto:nottherealalanturing@gmail.com"
+      >
+        <BsMailbox
+          size="45px"
+          color="#594c4c"
+          className={styles.contacticons}
+        />
+      </a>
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://angel.co/u/nottherealalanturing"
+      >
+        <FaAngellist
+          size="45px"
+          color="#594c4c"
+          className={styles.contacticons}
+        />
+      </a>
     </div>
   </div>
 );

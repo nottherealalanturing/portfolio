@@ -3,6 +3,7 @@
   flex-direction: column;
   gap: 5px;
 }
+
 .topbar {
   display: flex;
   justify-content: flex-start;
@@ -13,4 +14,11 @@
 .icon {
   width: 20px;
   height: 20px;
+}
+
+.contacticons {
+  width: 140px;
+  height: 140px;
+  size: 7rem;
+  color: #594c4c;
 }

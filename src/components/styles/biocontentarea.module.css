@@ -7,6 +7,11 @@
   padding: 0 5px;
 }
 
+.contact {
+  display: flex;
+  gap: 10px;
+}
+
 .image {
   width: 250px;
   border: 1px solid black;
@@ -16,6 +21,10 @@
   border-right: 1px solid #5a5a5a;
   border-bottom: 1px solid #5a5a5a;
   border-left: 2px solid #fafafa;
+}
+
+.innercontainer {
+  margin: 15px 0;
 }
 
 .header {
@@ -39,5 +48,5 @@
   font-size: 16px;
   line-height: 18px;
   word-spacing: 3px;
-  margin: 5px 0;
+  margin: 10px 0;
 }
