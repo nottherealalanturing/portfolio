@@ -9,7 +9,7 @@
   padding: 10px;
   width: 100%;
   border-bottom: 2px solid #4d4c4c;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .btnrow {
@@ -29,7 +29,7 @@
 .subjectheader {
   font-size: 26px;
   border: none;
-  background-color: #ffffff00;
+  background-color: #fff0;
 }
 
 .label {
@@ -44,6 +44,7 @@
 .receiverbadge {
   padding: 5px;
   background-color: #c2d6fc;
+  font-size: 18px;
 }
 
 .sendbtn,
@@ -67,9 +68,5 @@
 
 .sender,
 .subject {
-  font-size: 18px;
-}
-
-.receiverbadge {
   font-size: 18px;
 }
