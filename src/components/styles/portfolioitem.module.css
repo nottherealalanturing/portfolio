@@ -1,0 +1,60 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  position: relative;
+  height: 100px;
+}
+
+.imagediv {
+  width: 150px;
+  position: absolute;
+  z-index: 0;
+  padding: 5px;
+}
+
+.appimage {
+  width: 100%;
+}
+
+.textdiv {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.appname {
+  font-size: 24px;
+  color: #2a5f55;
+}
+
+.appdesc {
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2a5f55;
+}
+
+.appstack {
+  display: flex;
+  gap: 2px;
+}
+
+.applinks {
+  display: flex;
+  gap: 5px;
+}
+
+.stack {
+  padding: 3px;
+  background-color: #2a5f55;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+}

@@ -1,0 +1,58 @@
+.container {
+  height: 500px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 60px;
+}
+
+.contact {
+  display: flex;
+  gap: 10px;
+}
+
+.image {
+  width: 250px;
+  border: 1px solid black;
+  margin: 0 auto;
+  border-radius: 4px;
+  border-top: 2px solid #fafafa;
+  border-right: 1px solid #5a5a5a;
+  border-bottom: 1px solid #5a5a5a;
+  border-left: 2px solid #fafafa;
+}
+
+.innercontainer {
+  margin: 15px 0;
+}
+
+.textcontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header {
+  font-size: 24px;
+}
+
+.role {
+  font-size: 18px;
+}
+
+.location {
+  font-size: 12px;
+}
+
+.badge {
+  width: auto;
+  height: 20px;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 18px;
+  word-spacing: 3px;
+  margin: 10px 0;
+}

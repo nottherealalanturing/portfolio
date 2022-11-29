@@ -1,7 +1,3 @@
-/* eslint-disable react/button-has-type */
-/* eslint-disable react/self-closing-comp */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Draggable from 'react-draggable';
@@ -26,11 +22,16 @@ const WindowFrame = ({
 }) => {
   const dispatcher = useDispatch();
   const currentapp = useSelector((state) => state.taskbar[appname]);
+  const xpos = Math.floor(Math.random() * (260 - 150 + 1) + 150);
+  const ypos = -Math.floor(Math.random() * (200 - 190 + 1) + 190);
   return (
     <Draggable
       axis="both"
       handle=".handle"
-      defaultPosition={{ x: 50, y: -190 }}
+      defaultPosition={{
+        x: xpos,
+        y: ypos,
+      }}
       position={null}
       grid={[25, 25]}
       scale={1}
@@ -39,19 +40,27 @@ const WindowFrame = ({
       onStop={handleStop}
     >
       <div
-        className={['window', styles.frame]}
+        className="window"
         style={{
+          position: 'relative',
+          borderTop: '2px solid #fafafa',
+          borderRight: '1px solid #5a5a5a',
+          borderBottom: '1px solid #5a5a5a',
           zIndex: currentapp.top ? 1 : 0,
           display: isminimize ? 'block' : 'none',
+          width: currentapp.fullscreen ? '100vw' : '500px',
+          height: currentapp.fullscreen ? 'calc (100vh - 36px)' : '500px',
+          overflow: 'auto',
         }}
       >
         <div className="title-bar">
           <div
-            className="handle"
             onClick={() => dispatcher(focusApp(appname))}
             style={{
               width: '90%',
             }}
+            aria-hidden="true"
+            className="handle"
           >
             <div className="title-bar-text">
               <div className={styles.frametitle}>
@@ -70,19 +79,19 @@ const WindowFrame = ({
                 aria-label="Minimize"
                 onClick={() => dispatcher(minimize(appname))}
                 style={{ float: 'left' }}
-              >
-              </button>
+                type="button"
+              />
               <button
                 aria-label="Maximize"
                 onClick={() => dispatcher(fullscreen(appname))}
                 style={{ float: 'left' }}
-              >
-              </button>
+                type="button"
+              />
               <button
                 aria-label="Close"
                 onClick={() => dispatcher(close(appname))}
-              >
-              </button>
+                type="button"
+              />
             </div>
           </div>
         </div>

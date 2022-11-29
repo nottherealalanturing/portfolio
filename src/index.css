@@ -12,7 +12,7 @@
 }
 
 body {
-  margin: 0;
+  line-height: 16px;
   font-family:
     'MS Sans Serif',
     -apple-system,
@@ -45,4 +45,9 @@ code {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+}
+
+a,
+li {
+  text-decoration: none;
 }
