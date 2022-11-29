@@ -2,13 +2,12 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import styles from './styles/desktop.module.css';
 import WindowFrame from './windowframe';
-import {
-  mailicon, portfolioicon, bioicon, resumeicon,
-} from '../assets/icons';
+import { mailicon, portfolioicon, bioicon, resumeicon } from '../assets/icons';
 import Icon from './Icon';
 import AboutContentArea from './biographycontentarea';
 import MailContentArea from './mailcontentarea';
 import ResumeContentArea from './resumecontentarea';
+import PortfolioContentArea from './portfoliocontentarea';
 
 const Desktop = () => {
   const desktopapp = useSelector((state) => state.taskbar);
@@ -35,7 +34,7 @@ const Desktop = () => {
           icon={portfolioicon}
           isminimize={!desktopapp.portfolio.minimize}
         >
-          <p>dbjbasjdbasjbasfasfasknfasjkln</p>
+          <PortfolioContentArea />
         </WindowFrame>
       )}
       {!desktopapp.about.closed && (
