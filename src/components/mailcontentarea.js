@@ -20,7 +20,7 @@ const MailContentArea = () => {
         'service_bjcaxk2',
         'template_p2bn4me',
         formRef.current,
-        'bwlZat1rjw2YJEAy2'
+        'bwlZat1rjw2YJEAy2',
       )
       .then((result) => result.text);
     e.target.reset();

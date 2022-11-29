@@ -9,11 +9,12 @@ import styles from './styles/biocontentarea.module.css';
 const AboutContentArea = () => (
   <div className={styles.container}>
     <img src={heroimage} alt="Assad Isah" className={styles.image} />
-    <h2 className={styles.header}>Assad Isah (nottherealalanturing)</h2>
-    <h4 className={styles.role} style={{ paddingBottom: '10px' }}>
-      Fullstack Developer
-    </h4>
-    <h4 className={styles.location}>Kaduna, Nigeria. 📍</h4>
+    <div className={styles.textcontainer}>
+      <h2 className={styles.header}>Assad Isah</h2>
+      <h2 className={styles.header}>(nottherealalanturing)</h2>
+      <h4 className={styles.role}>Fullstack Developer</h4>
+      <h4 className={styles.location}>Kaduna, Nigeria. 📍</h4>
+    </div>
     <div className="badge-grid">
       <img
         className="badge"
