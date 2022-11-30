@@ -51,7 +51,7 @@ const ResumeContentArea = () => (
           className={styles.icon}
           alt="open resume in new tab"
         />
-        <p>Open In a New Tab</p>
+        <p>Open In Another Tab</p>
       </a>
     </nav>
 
