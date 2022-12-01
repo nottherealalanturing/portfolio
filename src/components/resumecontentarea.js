@@ -1,14 +1,10 @@
 import React from 'react';
-import { Document, pdfjs, Page } from 'react-pdf';
-import { downloadicon, newtabicon } from '../assets/icons';
-import MyDoc from '../assets/resume/AssadIsahResume.pdf';
 import styles from './styles/resumecontentarea.module.css';
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const ResumeContentArea = () => (
   <div className={styles.container}>
-    <nav className={styles.topbar}>
+    {/*  <nav className={styles.topbar}>
+  import { downloadicon, newtabicon } from '../assets/icons';
       <a
         href={MyDoc}
         className={styles.btn}
@@ -53,18 +49,13 @@ const ResumeContentArea = () => (
         />
         <p>Open In Another Tab</p>
       </a>
-    </nav>
+    </nav> */}
 
-    <Document file={MyDoc}>
-      <Page
-        pageNumber={1}
-        renderTextLayer={false}
-        renderAnnotationLayer={false}
-        width="400"
-        scale={1.2}
-      />
-    </Document>
+    <iframe
+      src="./AssadIsahResume.html"
+      title="resume"
+      className={styles.resumeframe}
+    />
   </div>
 );
-
 export default ResumeContentArea;

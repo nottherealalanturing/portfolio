@@ -134,6 +134,21 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           fullscreen: !isfullscreen,
         };
       },
+    )
+    .addMatcher(
+      (action) => action.type.endsWith('restorescreen'),
+      (state, action) => {
+        const isfullscreen = state[action.payload.appname].fullscreen;
+        const isopen = state[action.payload.appname].open;
+        const istop = state[action.payload.appname].top;
+        state[action.payload.appname] = {
+          open: isopen,
+          minimize: false,
+          closed: false,
+          top: istop,
+          fullscreen: !isfullscreen,
+        };
+      },
     );
 });
 

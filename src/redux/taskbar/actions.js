@@ -37,3 +37,9 @@ export const fullscreen = createAction('fullscreen', (appname) => ({
     appname,
   },
 }));
+
+export const restorescreen = createAction('restorescreen', (appname) => ({
+  payload: {
+    appname,
+  },
+}));

@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useSelector } from 'react-redux';
 import styles from './styles/desktop.module.css';
-import WindowFrame from './windowframe';
 import {
   mailicon, portfolioicon, bioicon, resumeicon,
 } from '../assets/icons';
@@ -10,52 +9,64 @@ import AboutContentArea from './biographycontentarea';
 import MailContentArea from './mailcontentarea';
 import ResumeContentArea from './resumecontentarea';
 import PortfolioContentArea from './portfoliocontentarea';
+import Frame from './Frame';
 
 const Desktop = () => {
   const desktopapp = useSelector((state) => state.taskbar);
+  const [height, setHeight] = useState(0);
+  const desktopareaheight = useRef(null);
+
+  useEffect(() => {
+    setHeight(desktopareaheight.current.clientHeight);
+  }, []);
   return (
-    <div className={styles.desktopArea}>
+    <div className={styles.desktopArea} ref={desktopareaheight}>
       <ul className={styles.iconlist}>
         <Icon appname="about" icon={bioicon} />
         <Icon appname="mail" icon={mailicon} />
         <Icon appname="portfolio" icon={portfolioicon} />
         <Icon appname="resume" icon={resumeicon} />
       </ul>
+
       {!desktopapp.mail.closed && (
-        <WindowFrame
+        <Frame
           appname="mail"
-          icon={mailicon}
-          isminimize={!desktopapp.mail.minimize}
+          appicon={mailicon}
+          desktopheight={height}
+          isminimize={desktopapp.mail.minimize}
         >
           <MailContentArea />
-        </WindowFrame>
+        </Frame>
       )}
       {!desktopapp.portfolio.closed && (
-        <WindowFrame
+        <Frame
           appname="portfolio"
-          icon={portfolioicon}
-          isminimize={!desktopapp.portfolio.minimize}
+          appicon={portfolioicon}
+          desktopheight={height}
+          isminimize={desktopapp.portfolio.minimize}
         >
           <PortfolioContentArea />
-        </WindowFrame>
+        </Frame>
       )}
       {!desktopapp.about.closed && (
-        <WindowFrame
+        <Frame
           appname="about"
-          icon={bioicon}
-          isminimize={!desktopapp.about.minimize}
+          appicon={bioicon}
+          desktopheight={height}
+          isminimize={desktopapp.about.minimize}
         >
           <AboutContentArea />
-        </WindowFrame>
+        </Frame>
       )}
       {!desktopapp.resume.closed && (
-        <WindowFrame
+        <Frame
           appname="resume"
-          icon={resumeicon}
-          isminimize={!desktopapp.resume.minimize}
+          appicon={resumeicon}
+          desktopheight={height}
+          isminimize={desktopapp.resume.minimize}
         >
           <ResumeContentArea />
-        </WindowFrame>
+        </Frame>
       )}
     </div>
   );
