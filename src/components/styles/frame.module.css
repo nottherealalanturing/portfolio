@@ -18,19 +18,6 @@
   min-width: min-content;
 }
 
-.frametitle {
-  text-transform: capitalize;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  height: 10px;
-  gap: 5px;
-  padding: 5px;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-}
-
 .framecontrols {
   display: flex;
 }
@@ -48,9 +35,6 @@
 
 .framecontrols button:focus {
   outline: none;
-}
-
-.windowbody {
 }
 
 .appicon {
