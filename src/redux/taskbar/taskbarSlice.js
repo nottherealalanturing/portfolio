@@ -63,6 +63,26 @@ const taskbarReducer = createReducer(initialState, (builder) => {
       },
     )
     .addMatcher(
+      (action) => action.type.endsWith('taskbarfocus'),
+      (state, action) => {
+        state.about.open = false;
+        state.mail.open = false;
+        state.resume.open = false;
+        // state.portfolio.open = false;
+        state.about.top = false;
+        state.mail.top = false;
+        state.resume.top = false;
+        // state.portfolio.top = false;
+
+        const istop = state[action.payload.appname].top;
+        const isminimize = state[action.payload.appname].top;
+
+        state[action.payload.appname].minimize = !isminimize;
+        state[action.payload.appname].top = !istop;
+        state[action.payload.appname].open = true;
+      },
+    )
+    .addMatcher(
       (action) => action.type.endsWith('launchApp'),
       (state, action) => {
         state[action.payload.appname] = {

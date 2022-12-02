@@ -43,3 +43,9 @@ export const restorescreen = createAction('restorescreen', (appname) => ({
     appname,
   },
 }));
+
+export const taskbarfocus = createAction('taskbarfocus', (appname) => ({
+  payload: {
+    appname,
+  },
+}));
