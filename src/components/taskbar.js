@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import {
   bioicon, mailicon, portfolioicon, resumeicon,
 } from '../assets/icons';
-import { minimize } from '../redux/taskbar/actions';
+import { taskbarfocus } from '../redux/taskbar/actions';
 import Notificationarea from './notificationarea';
 import StartButton from './startbutton';
 import StartMenu from './startmenu';
@@ -26,7 +26,7 @@ const Taskbar = () => {
               icon={bioicon}
               altText="icon"
               appstate={taskbarapps.about}
-              action={minimize}
+              action={taskbarfocus}
             />
           )}
           {!taskbarapps.mail.closed && (
@@ -35,7 +35,7 @@ const Taskbar = () => {
               icon={mailicon}
               altText="icon"
               appstate={taskbarapps.mail}
-              action={minimize}
+              action={taskbarfocus}
             />
           )}
           {!taskbarapps.portfolio.closed && (
@@ -44,7 +44,7 @@ const Taskbar = () => {
               icon={portfolioicon}
               altText="icon"
               appstate={taskbarapps.portfolio}
-              action={minimize}
+              action={taskbarfocus}
             />
           )}
           {!taskbarapps.resume.closed && (
@@ -53,7 +53,7 @@ const Taskbar = () => {
               icon={resumeicon}
               altText="icon"
               appstate={taskbarapps.resume}
-              action={minimize}
+              action={taskbarfocus}
             />
           )}
         </ul>

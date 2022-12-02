@@ -3,6 +3,7 @@
   grid-template-columns: repeat(12, 1fr);
   position: relative;
   height: 100px;
+  width: 450px;
 }
 
 .imagediv {
@@ -38,7 +39,8 @@
   align-self: flex-start;
   font-size: 14px;
   font-weight: bold;
-  color: #2a5f55;
+  color: #008080;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .appstack {

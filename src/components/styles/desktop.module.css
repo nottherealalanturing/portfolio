@@ -3,6 +3,8 @@
   width: 100%;
   height: calc(100% - 36px);
   background-color: #008080;
+  display: block;
+  position: relative;
 }
 
 .iconlist {

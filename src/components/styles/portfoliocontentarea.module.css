@@ -1,6 +1,9 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  height: 500px;
+  justify-items: center;
   gap: 10px;
+  width: 100%;
+  overflow: auto;
+  height: 100%;
 }
