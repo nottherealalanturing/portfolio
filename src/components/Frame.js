@@ -54,8 +54,8 @@ const Frame = ({
         className={styles.window}
         style={{
           position: 'absolute',
-          top: fullscreen ? 0 : 3,
-          left: fullscreen ? 0 : 3,
+          top: 0,
+          left: 0,
           width: currentapp.fullscreen ? '100%' : '400px',
           height: currentapp.fullscreen ? `${desktopheight}px` : 'min-content',
           zIndex: currentapp.top ? 1 : 0,
@@ -66,6 +66,7 @@ const Frame = ({
           <div
             className="handle"
             onClick={() => dispatcher(focusApp(appname))}
+            onDoubleClick={() => dispatcher(fullscreen(appname))}
             aria-hidden="true"
             style={{
               textTransform: 'capitalize',
