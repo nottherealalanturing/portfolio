@@ -56,7 +56,7 @@ const Frame = ({
           position: 'absolute',
           top: 0,
           left: 0,
-          width: currentapp.fullscreen ? '100%' : 'max-content',
+          width: currentapp.fullscreen ? '100%' : '500px',
           height: currentapp.fullscreen ? `${desktopheight}px` : 'min-content',
           zIndex: currentapp.top ? 1 : 0,
           display: isminimize ? 'none' : 'block',
@@ -120,10 +120,12 @@ const Frame = ({
         <div
           className={styles.windowbody}
           style={{
-            height: currentapp.fullscreen ? `${newheight}px` : '800px',
+            height: currentapp.fullscreen
+              ? `${newheight}px`
+              : `${desktopheight / 2}px`,
             minWidth: '500px',
             minHeight: '500px',
-            resize: 'both',
+            paddingRight: '5px',
             overflow: 'auto',
           }}
         >

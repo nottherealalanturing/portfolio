@@ -1,16 +1,22 @@
 .container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+  align-items: center;
   position: relative;
   height: 100px;
   width: 450px;
+  padding: 80px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .imagediv {
+  display: flex;
+  height: 100%;
   width: 150px;
   position: absolute;
   z-index: 0;
   padding: 5px;
+  overflow: hidden;
 }
 
 .appimage {
@@ -23,23 +29,20 @@
   width: 350px;
   padding: 5px;
   position: absolute;
-  top: 0;
   right: 0;
   z-index: 1;
   align-items: flex-end;
-  gap: 3px;
+  gap: 5px;
+  color: #314f4f;
 }
 
 .appname {
   font-size: 24px;
-  color: #2a5f55;
 }
 
 .appdesc {
-  align-self: flex-start;
   font-size: 14px;
-  font-weight: bold;
-  color: #008080;
+  font-weight: 700;
   font-family: Arial, Helvetica, sans-serif;
 }
 

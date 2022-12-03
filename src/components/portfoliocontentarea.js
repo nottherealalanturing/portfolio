@@ -1,56 +1,58 @@
 import React from 'react';
-import starwars from '../assets/portfolio/starwars.jpg';
+import {
+  todo,
+  cryptobazaar,
+  spacetraveller,
+  pokeyverse,
+  portfolioimg,
+} from '../assets/portfolio';
 import PortfolioItem from './portfolioitem';
 import styles from './styles/portfoliocontentarea.module.css';
 
 const projects = [
   {
-    appname: 'star wars',
-    appimage: starwars,
-    appdesc: 'This is the final sequel',
-    appgithublink: 'https://git',
-    applivelink: 'https://git',
-    appstack: ['HTML', 'CSS', 'React', 'Node'],
+    appname: 'Todo',
+    appimage: todo,
+    appdesc: 'A minimalist todo app bundled with webpack.',
+    appgithublink: 'https://github.com/nottherealalanturing/todo',
+    applivelink: 'https://nottherealalanturing.github.io/todo/',
+    appstack: ['HTML', 'CSS', 'Webpack', 'JavaScript'],
   },
   {
-    appname: 'Indiana Jone',
-    appimage: starwars,
-    appdesc: 'The house of dragons',
-    appgithublink: 'https://git',
-    applivelink: 'https://git',
-    appstack: ['React', 'Node', 'Rails'],
+    appname: 'Crypto Bazaar',
+    appimage: cryptobazaar,
+    appdesc:
+      'A mobile app that uses the Coin-Cap API to display over a 1000 crypto currencies, their current values and graph of their changes over the recent days.',
+    appgithublink: 'https://github.com/nottherealalanturing/cryptobazaar',
+    applivelink: 'https://cryptobazaar.netlify.app/',
+    appstack: ['React', 'Redux', 'React-Router', 'Chart.js'],
   },
   {
-    appname: 'star wars',
-    appimage: starwars,
-    appdesc: 'This is the final sequel',
-    appgithublink: 'https://git',
-    applivelink: 'https://git',
-    appstack: ['HTML', 'CSS', 'React', 'Node'],
+    appname: "Space Traveller's Hub",
+    appimage: spacetraveller,
+    appdesc:
+      'A web app that consumes SpaceX API to display the list of available Rockets and Missions. Users can reserve missions or rockets.',
+    appgithublink:
+      'https://github.com/nottherealalanturing/space-travelers-hub',
+    applivelink: 'https://space-travels-app.netlify.app/',
+    appstack: ['React', 'Redux', 'React-Router', 'Sass'],
   },
   {
-    appname: 'Indiana Jone',
-    appimage: starwars,
-    appdesc: 'The house of dragons',
-    appgithublink: 'https://git',
-    applivelink: 'https://git',
-    appstack: ['React', 'Node', 'Rails'],
+    appname: 'Pokeyverse',
+    appimage: pokeyverse,
+    appdesc: 'A website bundled with web pack that renders pokemon characters.',
+    appgithublink: 'https://nottherealalanturing.github.io/Pokeyverse',
+    applivelink: 'https://nottherealalanturing.github.io/Pokeyverse/',
+    appstack: ['HTML', 'CSS', 'Axios', 'JavaScript'],
   },
   {
-    appname: 'star wars',
-    appimage: starwars,
-    appdesc: 'This is the final sequel',
-    appgithublink: 'https://git',
-    applivelink: 'https://git',
-    appstack: ['HTML', 'CSS', 'React', 'Node'],
-  },
-  {
-    appname: 'Indiana Jone',
-    appimage: starwars,
-    appdesc: 'The house of dragons',
-    appgithublink: 'https://git',
-    applivelink: 'https://git',
-    appstack: ['React', 'Node', 'Rails'],
+    appname: 'Portfolio',
+    appimage: portfolioimg,
+    appdesc:
+      'My current portfolio built to mimic the windows 95 Operating system with page sections rendered as window applications',
+    appgithublink: 'https://github.com/nottherealalanturing/portfolio',
+    applivelink: 'https://www.nottherealalanturing.tech/',
+    appstack: ['React', 'Redux'],
   },
 ];
 const PortfolioContentArea = () => (
