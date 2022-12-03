@@ -1,7 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createReducer } from '@reduxjs/toolkit';
-import { clickStart } from './actions';
-// import { minimize, maximize, close } from './actions';
+import { clickStart, closeStart } from './actions';
 
 const initialState = {
   mail: {
@@ -39,6 +38,10 @@ const taskbarReducer = createReducer(initialState, (builder) => {
   builder
     .addCase(clickStart, (state) => {
       state.startbutton = !state.startbutton;
+    })
+
+    .addCase(closeStart, (state) => {
+      state.startbutton = false;
     })
 
     .addMatcher(

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles/desktop.module.css';
 import {
   mailicon, portfolioicon, bioicon, resumeicon,
@@ -10,9 +10,11 @@ import MailContentArea from './mailcontentarea';
 import ResumeContentArea from './resumecontentarea';
 import PortfolioContentArea from './portfoliocontentarea';
 import Frame from './Frame';
+import { closeStart } from '../redux/taskbar/actions';
 
 const Desktop = () => {
   const desktopapp = useSelector((state) => state.taskbar);
+  const dispatcher = useDispatch();
   const [height, setHeight] = useState(0);
   const desktopareaheight = useRef(null);
 
@@ -20,14 +22,18 @@ const Desktop = () => {
     setHeight(desktopareaheight.current.clientHeight);
   }, []);
   return (
-    <div className={styles.desktopArea} ref={desktopareaheight}>
+    <div
+      className={styles.desktopArea}
+      ref={desktopareaheight}
+      onClick={() => dispatcher(closeStart())}
+      aria-hidden="true"
+    >
       <ul className={styles.iconlist}>
         <Icon appname="about" icon={bioicon} />
         <Icon appname="mail" icon={mailicon} />
         <Icon appname="portfolio" icon={portfolioicon} />
         <Icon appname="resume" icon={resumeicon} />
       </ul>
-
       {!desktopapp.mail.closed && (
         <Frame
           appname="mail"
