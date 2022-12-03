@@ -49,7 +49,7 @@ const projects = [
     appname: 'Portfolio',
     appimage: portfolioimg,
     appdesc:
-      'My current portfolio built to mimic the windows 95 Operating system with page sections rendered as window applications',
+      'Built to mimic the windows 95 Operating system with page sections rendered as window applications',
     appgithublink: 'https://github.com/nottherealalanturing/portfolio',
     applivelink: 'https://www.nottherealalanturing.tech/',
     appstack: ['React', 'Redux'],

@@ -4,7 +4,6 @@
   align-items: center;
   position: relative;
   height: 100px;
-  width: 450px;
   padding: 80px;
   box-shadow: rgba(0, 0, 0, 0.16) 0 1px 4px;
 }
@@ -40,10 +39,8 @@
   font-size: 24px;
 }
 
-.appdesc {
-  font-size: 14px;
-  font-weight: 700;
-  font-family: Arial, Helvetica, sans-serif;
+.appdesc:hover {
+  width: max-content;
 }
 
 .appstack {
