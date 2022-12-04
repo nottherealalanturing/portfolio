@@ -10,7 +10,6 @@
   /* stylelint-enable */
   color: #000;
   height: 28px;
-  width: 80px;
   border-top: 1px solid #000;
   border-right: 1px solid #fafafa;
   border-bottom: 1px solid #fafafa;
@@ -45,7 +44,6 @@
   background-position: 0% 0%;
   color: #000;
   height: 28px;
-  width: 80px;
   border-top: 2px solid #dfdfdf;
   border-right: 2px solid #808080;
   border-bottom: 2px solid #808080;

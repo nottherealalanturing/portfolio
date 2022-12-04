@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './styles/resumecontentarea.module.css';
+import { downloadicon, newtabicon } from '../assets/icons';
+import MyDoc from '../assets/resume/AssadIsahResume.pdf';
 
 const ResumeContentArea = () => (
   <div className={styles.container}>
-    {/*  <nav className={styles.topbar}>
-  import { downloadicon, newtabicon } from '../assets/icons';
+    <nav className={styles.topbar}>
       <a
         href={MyDoc}
         className={styles.btn}
@@ -49,7 +50,7 @@ const ResumeContentArea = () => (
         />
         <p>Open In Another Tab</p>
       </a>
-    </nav> */}
+    </nav>
 
     <iframe
       src="./AssadIsahResume.html"
