@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles/desktop.module.css';
-import {
-  mailicon, portfolioicon, bioicon, resumeicon,
-} from '../assets/icons';
+import { mailicon, portfolioicon, bioicon, resumeicon } from '../assets/icons';
 import Icon from './Icon';
 import AboutContentArea from './biographycontentarea';
 import MailContentArea from './mailcontentarea';

@@ -2,9 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Taskbar from './taskbar';
 import Icon from './Icon';
-import {
-  bioicon, mailicon, portfolioicon, resumeicon,
-} from '../assets/icons';
+import { bioicon, mailicon, portfolioicon, resumeicon } from '../assets/icons';
 import { closeStart } from '../redux/taskbar/actions';
 import MobileFrame from './mobileframe';
 import MailContentArea from './mailcontentarea';

@@ -1,17 +1,27 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import styles from './styles/startmenuitem.module.css';
+import { launchApp } from '../redux/taskbar/actions';
 
-const StartMenuItem = ({ text, icon }) => (
-  <li className={styles.container}>
-    <img src={icon} className={styles.icon} alt={text} />
-    <span className={styles.smiText}>{text}</span>
-  </li>
-);
+const StartMenuItem = ({ appname, icon }) => {
+  const dispatcher = useDispatch();
+
+  return (
+    <li
+      className={styles.container}
+      onClick={() => dispatcher(launchApp(appname))}
+      aria-hidden
+    >
+      <img src={icon} className={styles.icon} alt={appname} />
+      <span className={styles.smiText}>{appname}</span>
+    </li>
+  );
+};
 
 StartMenuItem.propTypes = {
   icon: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
+  appname: PropTypes.string.isRequired,
 };
 
 export default StartMenuItem;

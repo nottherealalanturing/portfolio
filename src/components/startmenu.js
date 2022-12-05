@@ -1,9 +1,13 @@
 import React from 'react';
 import {
+  bioicon,
   docicon,
   findicon,
   helpicon,
+  mailicon,
+  portfolioicon,
   progicon,
+  resumeicon,
   runicon,
   settingsicon,
   shuticon,
@@ -18,14 +22,14 @@ const StartMenu = () => (
       <img src={sidebaricon} alt="sidebar" className={styles.sidebarimg} />
     </span>
     <ul className={styles.listcontainer}>
-      <StartMenuItem text="Programs" icon={progicon} />
-      <StartMenuItem text="Documents" icon={docicon} />
-      <StartMenuItem text="Settings" icon={settingsicon} />
-      <StartMenuItem text="Find" icon={findicon} />
-      <StartMenuItem text="Help" icon={helpicon} />
-      <StartMenuItem text="Run" icon={runicon} />
+      <StartMenuItem appname="about" icon={bioicon} />
+      <StartMenuItem appname="mail" icon={mailicon} />
+      <StartMenuItem appname="portfolio" icon={portfolioicon} />
+      <StartMenuItem appname="resume" icon={resumeicon} />
+      <StartMenuItem appname="" icon={''} />
+      <StartMenuItem appname="" icon={''} />
       <div className={styles.seperator} />
-      <StartMenuItem text="Shut Down..." icon={shuticon} />
+      <StartMenuItem appname="Shut Down..." icon={shuticon} />
     </ul>
   </div>
 );
