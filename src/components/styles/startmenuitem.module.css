@@ -2,9 +2,22 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 5px;
+  gap: 7px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.container:hover {
+  border-bottom: 1px solid #23365eea;
+  background-color: #23365e22;
 }
 
 .smiText {
   font-size: 13px;
+  text-transform: capitalize;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
 }

@@ -1,11 +1,10 @@
 import React from 'react';
 import {
-  docicon,
-  findicon,
-  helpicon,
-  progicon,
-  runicon,
-  settingsicon,
+  bioicon,
+  blogicon,
+  mailicon,
+  portfolioicon,
+  resumeicon,
   shuticon,
   sidebaricon,
 } from '../assets/icons';
@@ -18,14 +17,18 @@ const StartMenu = () => (
       <img src={sidebaricon} alt="sidebar" className={styles.sidebarimg} />
     </span>
     <ul className={styles.listcontainer}>
-      <StartMenuItem text="Programs" icon={progicon} />
-      <StartMenuItem text="Documents" icon={docicon} />
-      <StartMenuItem text="Settings" icon={settingsicon} />
-      <StartMenuItem text="Find" icon={findicon} />
-      <StartMenuItem text="Help" icon={helpicon} />
-      <StartMenuItem text="Run" icon={runicon} />
+      <StartMenuItem appname="about" action="about" icon={bioicon} />
+      <StartMenuItem appname="mail" action="mail" icon={mailicon} />
+      <StartMenuItem
+        appname="portfolio"
+        action="portfolio"
+        icon={portfolioicon}
+      />
+      <StartMenuItem appname="resume" action="resume" icon={resumeicon} />
+      <StartMenuItem appname="blog" action="blog" icon={blogicon} />
+      <div style={{ width: '125px', height: '32px' }} />
       <div className={styles.seperator} />
-      <StartMenuItem text="Shut Down..." icon={shuticon} />
+      <StartMenuItem appname="Shut Down..." action="shutdown" icon={shuticon} />
     </ul>
   </div>
 );

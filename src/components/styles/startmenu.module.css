@@ -29,6 +29,7 @@
 .listcontainer {
   margin-left: 1px;
   list-style: none;
+  pointer-events: all;
 }
 
 .seperator {
