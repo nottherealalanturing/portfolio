@@ -22,6 +22,8 @@ export const clickStart = createAction('clickStart');
 
 export const closeStart = createAction('closeStart');
 
+export const shutdown = createAction('shutdown');
+
 export const focusApp = createAction('focusApp', (appname) => ({
   payload: {
     appname,

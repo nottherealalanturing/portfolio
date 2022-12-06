@@ -18,6 +18,7 @@ import {
 } from './contentarea';
 import Frame from './Frame';
 import { closeStart } from '../redux/taskbar/actions';
+import ShutDown from './shutdown';
 
 const Desktop = () => {
   const desktopapp = useSelector((state) => state.taskbar);
@@ -92,6 +93,7 @@ const Desktop = () => {
           <BlogContentArea />
         </Frame>
       )}
+      {desktopapp.shutdown && <ShutDown />}
     </div>
   );
 };

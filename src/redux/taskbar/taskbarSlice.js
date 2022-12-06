@@ -1,6 +1,6 @@
 /* eslint-disable no-param-reassign */
 import { createReducer } from '@reduxjs/toolkit';
-import { clickStart, closeStart } from './actions';
+import { clickStart, closeStart, shutdown } from './actions';
 
 const initialState = {
   mail: {
@@ -39,6 +39,7 @@ const initialState = {
     fullscreen: false,
   },
   startbutton: false,
+  shutdown: false,
 };
 
 const taskbarReducer = createReducer(initialState, (builder) => {
@@ -49,6 +50,10 @@ const taskbarReducer = createReducer(initialState, (builder) => {
 
     .addCase(closeStart, (state) => {
       state.startbutton = false;
+    })
+
+    .addCase(shutdown, (state) => {
+      state.shutdown = true;
     })
 
     .addMatcher(
@@ -71,7 +76,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: isfullscreen,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('taskbarfocus'),
@@ -93,7 +98,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: isfullscreen,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('launchApp'),
@@ -114,7 +119,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: false,
         };
-      },
+      }
     )
 
     .addMatcher(
@@ -132,7 +137,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: !istop,
           fullscreen: isfullscreen,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('maximize'),
@@ -150,7 +155,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: isfullscreen,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('close'),
@@ -163,7 +168,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: false,
           fullscreen: false,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('fullscreen'),
@@ -179,7 +184,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: istop,
           fullscreen: !isfullscreen,
         };
-      },
+      }
     )
     .addMatcher(
       (action) => action.type.endsWith('restorescreen'),
@@ -195,7 +200,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: istop,
           fullscreen: !isfullscreen,
         };
-      },
+      }
     );
 });
 
