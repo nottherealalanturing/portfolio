@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       {isBigScreen && (
-        <div className="windowsarea">
+        <div className="windowsarea" onContextMenu={(e) => e.preventDefault()}>
           <Desktop />
           <Taskbar />
         </div>
