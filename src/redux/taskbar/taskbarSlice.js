@@ -76,7 +76,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: isfullscreen,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('taskbarfocus'),
@@ -98,7 +98,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: isfullscreen,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('launchApp'),
@@ -119,7 +119,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: false,
         };
-      }
+      },
     )
 
     .addMatcher(
@@ -137,7 +137,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: !istop,
           fullscreen: isfullscreen,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('maximize'),
@@ -155,7 +155,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: true,
           fullscreen: isfullscreen,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('close'),
@@ -168,7 +168,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: false,
           fullscreen: false,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('fullscreen'),
@@ -184,7 +184,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: istop,
           fullscreen: !isfullscreen,
         };
-      }
+      },
     )
     .addMatcher(
       (action) => action.type.endsWith('restorescreen'),
@@ -200,7 +200,7 @@ const taskbarReducer = createReducer(initialState, (builder) => {
           top: istop,
           fullscreen: !isfullscreen,
         };
-      }
+      },
     );
 });
 
