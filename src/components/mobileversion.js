@@ -17,6 +17,7 @@ import PortfolioContentArea from './portfoliocontentarea';
 import AboutContentArea from './biographycontentarea';
 import ResumeContentArea from './resumecontentarea';
 import BlogContentArea from './blogcontentarea';
+import ShutDown from './shutdown';
 
 const MobileVersion = () => {
   const desktopapp = useSelector((state) => state.taskbar);
@@ -93,6 +94,7 @@ const MobileVersion = () => {
               <BlogContentArea />
             </MobileFrame>
           )}
+          {desktopapp.shutdown && <ShutDown />}
         </div>
       </div>
       <Taskbar />
