@@ -1,0 +1,21 @@
+.container {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.43);
+}
+
+.band {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+}
+
+@media (min-width: 501px) {
+  .band {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

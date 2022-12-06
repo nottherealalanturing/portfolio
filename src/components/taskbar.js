@@ -1,7 +1,11 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import {
-  bioicon, mailicon, portfolioicon, resumeicon,
+  bioicon,
+  blogicon,
+  mailicon,
+  portfolioicon,
+  resumeicon,
 } from '../assets/icons';
 import { taskbarfocus } from '../redux/taskbar/actions';
 import Notificationarea from './notificationarea';
@@ -53,6 +57,15 @@ const Taskbar = () => {
               icon={resumeicon}
               altText="icon"
               appstate={taskbarapps.resume}
+              action={taskbarfocus}
+            />
+          )}
+          {!taskbarapps.blog.closed && (
+            <TaskbarApp
+              name="blog"
+              icon={blogicon}
+              altText="blog"
+              appstate={taskbarapps.blog}
               action={taskbarfocus}
             />
           )}

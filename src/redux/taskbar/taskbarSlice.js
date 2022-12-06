@@ -31,6 +31,13 @@ const initialState = {
     top: false,
     fullscreen: false,
   },
+  blog: {
+    open: false,
+    minimize: false,
+    closed: true,
+    top: false,
+    fullscreen: false,
+  },
   startbutton: false,
 };
 

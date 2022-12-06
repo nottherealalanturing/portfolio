@@ -2,7 +2,13 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Taskbar from './taskbar';
 import Icon from './Icon';
-import { bioicon, mailicon, portfolioicon, resumeicon } from '../assets/icons';
+import {
+  bioicon,
+  blogicon,
+  mailicon,
+  portfolioicon,
+  resumeicon,
+} from '../assets/icons';
 import { closeStart } from '../redux/taskbar/actions';
 import MobileFrame from './mobileframe';
 import MailContentArea from './mailcontentarea';
@@ -10,6 +16,7 @@ import styles from './styles/mobileversion.module.css';
 import PortfolioContentArea from './portfoliocontentarea';
 import AboutContentArea from './biographycontentarea';
 import ResumeContentArea from './resumecontentarea';
+import BlogContentArea from './blogcontentarea';
 
 const MobileVersion = () => {
   const desktopapp = useSelector((state) => state.taskbar);
@@ -34,6 +41,7 @@ const MobileVersion = () => {
             <Icon appname="mail" icon={mailicon} />
             <Icon appname="portfolio" icon={portfolioicon} />
             <Icon appname="resume" icon={resumeicon} />
+            <Icon appname="blog" icon={blogicon} />
           </ul>
           {!desktopapp.mail.closed && (
             <MobileFrame
@@ -73,6 +81,16 @@ const MobileVersion = () => {
               isminimize={desktopapp.resume.minimize}
             >
               <ResumeContentArea />
+            </MobileFrame>
+          )}
+          {!desktopapp.blog.closed && (
+            <MobileFrame
+              appname="blog"
+              appicon={blogicon}
+              desktopheight={height}
+              isminimize={desktopapp.blog.minimize}
+            >
+              <BlogContentArea />
             </MobileFrame>
           )}
         </div>

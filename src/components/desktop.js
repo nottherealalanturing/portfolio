@@ -1,12 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles/desktop.module.css';
-import { mailicon, portfolioicon, bioicon, resumeicon } from '../assets/icons';
+import {
+  mailicon,
+  portfolioicon,
+  bioicon,
+  resumeicon,
+  blogicon,
+} from '../assets/icons';
 import Icon from './Icon';
-import AboutContentArea from './biographycontentarea';
-import MailContentArea from './mailcontentarea';
-import ResumeContentArea from './resumecontentarea';
-import PortfolioContentArea from './portfoliocontentarea';
+import {
+  AboutContentArea,
+  MailContentArea,
+  ResumeContentArea,
+  PortfolioContentArea,
+  BlogContentArea,
+} from './contentarea';
 import Frame from './Frame';
 import { closeStart } from '../redux/taskbar/actions';
 
@@ -31,6 +40,7 @@ const Desktop = () => {
         <Icon appname="mail" icon={mailicon} />
         <Icon appname="portfolio" icon={portfolioicon} />
         <Icon appname="resume" icon={resumeicon} />
+        <Icon appname="blog" icon={blogicon} />
       </ul>
       {!desktopapp.mail.closed && (
         <Frame
@@ -70,6 +80,16 @@ const Desktop = () => {
           isminimize={desktopapp.resume.minimize}
         >
           <ResumeContentArea />
+        </Frame>
+      )}
+      {!desktopapp.blog.closed && (
+        <Frame
+          appname="blog"
+          appicon={blogicon}
+          desktopheight={height}
+          isminimize={desktopapp.blog.minimize}
+        >
+          <BlogContentArea />
         </Frame>
       )}
     </div>

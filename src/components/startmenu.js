@@ -1,15 +1,10 @@
 import React from 'react';
 import {
   bioicon,
-  docicon,
-  findicon,
-  helpicon,
+  blogicon,
   mailicon,
   portfolioicon,
-  progicon,
   resumeicon,
-  runicon,
-  settingsicon,
   shuticon,
   sidebaricon,
 } from '../assets/icons';
@@ -26,8 +21,8 @@ const StartMenu = () => (
       <StartMenuItem appname="mail" icon={mailicon} />
       <StartMenuItem appname="portfolio" icon={portfolioicon} />
       <StartMenuItem appname="resume" icon={resumeicon} />
-      <StartMenuItem appname="" icon={''} />
-      <StartMenuItem appname="" icon={''} />
+      <StartMenuItem appname="blog" icon={blogicon} />
+      <div style={{ width: '125px', height: '32px' }} />
       <div className={styles.seperator} />
       <StartMenuItem appname="Shut Down..." icon={shuticon} />
     </ul>
