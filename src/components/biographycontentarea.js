@@ -71,12 +71,13 @@ const AboutContentArea = () => (
     <div className="innercontainer">
       <h3 className={styles.heading}>About Me</h3>
       <p className={styles.paragraph}>
-        Hi there, I&apos;m Assad, a creative Full-stack web developer with a
-        knack for bringing UX designs to life and a strong ambition to build
-        simple, user-friendly solutions with javascript and ruby. I can help you
-        build a product, feature or website Look through some of my work and
-        experience! If you like what you see and have a project you need coded,
-        don&apos;t hestiate to contact me.
+        Hi there, I&apos;m Assad, a full-stack web developer with a passion for
+        creating user-friendly solutions. I specialize in using JavaScript and
+        Ruby to bring UX designs to life and build simple, intuitive products,
+        features, and websites. Take a look at some of my work and experience to
+        see if I&apos;m the right fit for your project. If you&apos;re
+        interested in working together, don&apos;t hesitate to reach out,
+        I&apos;d love to help bring your vision to fruition.
       </p>
     </div>
 
