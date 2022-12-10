@@ -1,6 +1,7 @@
 # Portfolio.
 
-> My portolio app created to mimic the windows 95 Operating system. Sections of the web page are rendered as Windows Applications.
+> My portolio, this application is created to mimic the look and feel of the old windows 95 Operating system with Sections of the web app like resume, bio, blog and mail rendered as Windows Applications which a user can launch, drag, maximize and close at will.
+> The application is also fully mobile responsive.
 
 ## Built With
 
