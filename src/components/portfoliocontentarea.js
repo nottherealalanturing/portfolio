@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   todo,
   cryptobazaar,
@@ -6,63 +6,63 @@ import {
   pokeyverse,
   portfolioimg,
   carecloud,
-} from "../assets/portfolio";
-import PortfolioItem from "./portfolioitem";
-import styles from "./styles/portfoliocontentarea.module.css";
+} from '../assets/portfolio';
+import PortfolioItem from './portfolioitem';
+import styles from './styles/portfoliocontentarea.module.css';
 
 const projects = [
   {
-    appname: "Todo",
+    appname: 'Todo',
     appimage: todo,
-    appdesc: "A minimalist todo app bundled with webpack.",
-    appgithublink: "https://github.com/nottherealalanturing/todo",
-    applivelink: "https://nottherealalanturing.github.io/todo/",
-    appstack: ["HTML", "CSS", "Webpack", "JavaScript"],
+    appdesc: 'A minimalist todo app bundled with webpack.',
+    appgithublink: 'https://github.com/nottherealalanturing/todo',
+    applivelink: 'https://nottherealalanturing.github.io/todo/',
+    appstack: ['HTML', 'CSS', 'Webpack', 'JavaScript'],
   },
   {
-    appname: "Crypto Bazaar",
+    appname: 'Crypto Bazaar',
     appimage: cryptobazaar,
     appdesc:
-      "A mobile app that uses the Coin-Cap API to display over a 1000 crypto currencies, their current values and graph of their changes over the recent days.",
-    appgithublink: "https://github.com/nottherealalanturing/cryptobazaar",
-    applivelink: "https://cryptobazaar.netlify.app/",
-    appstack: ["React", "Redux", "React-Router", "Chart.js"],
+      'A mobile app that uses the Coin-Cap API to display over a 1000 crypto currencies, their current values and graph of their changes over the recent days.',
+    appgithublink: 'https://github.com/nottherealalanturing/cryptobazaar',
+    applivelink: 'https://cryptobazaar.netlify.app/',
+    appstack: ['React', 'Redux', 'React-Router', 'Chart.js'],
   },
   {
     appname: "Space Traveller's Hub",
     appimage: spacetraveller,
     appdesc:
-      "A web app that consumes SpaceX API to display the list of available Rockets and Missions. Users can reserve missions or rockets.",
+      'A web app that consumes SpaceX API to display the list of available Rockets and Missions. Users can reserve missions or rockets.',
     appgithublink:
-      "https://github.com/nottherealalanturing/space-travelers-hub",
-    applivelink: "https://space-travels-app.netlify.app/",
-    appstack: ["React", "Redux", "React-Router", "Sass"],
+      'https://github.com/nottherealalanturing/space-travelers-hub',
+    applivelink: 'https://space-travels-app.netlify.app/',
+    appstack: ['React', 'Redux', 'React-Router', 'Sass'],
   },
   {
-    appname: "Pokeyverse",
+    appname: 'Pokeyverse',
     appimage: pokeyverse,
-    appdesc: "A website bundled with web pack that renders pokemon characters.",
-    appgithublink: "https://nottherealalanturing.github.io/Pokeyverse",
-    applivelink: "https://nottherealalanturing.github.io/Pokeyverse/",
-    appstack: ["HTML", "CSS", "Axios", "JavaScript"],
+    appdesc: 'A website bundled with web pack that renders pokemon characters.',
+    appgithublink: 'https://nottherealalanturing.github.io/Pokeyverse',
+    applivelink: 'https://nottherealalanturing.github.io/Pokeyverse/',
+    appstack: ['HTML', 'CSS', 'Axios', 'JavaScript'],
   },
   {
-    appname: "Portfolio",
+    appname: 'Portfolio',
     appimage: portfolioimg,
     appdesc:
-      "Built to mimic the look and feel of the old windows 95 Operating system with page sections rendered as window applications",
-    appgithublink: "https://github.com/nottherealalanturing/portfolio",
-    applivelink: "https://www.nottherealalanturing.tech/",
-    appstack: ["React", "Redux"],
+      'Built to mimic the look and feel of the old windows 95 Operating system with page sections rendered as window applications',
+    appgithublink: 'https://github.com/nottherealalanturing/portfolio',
+    applivelink: 'https://www.nottherealalanturing.tech/',
+    appstack: ['React', 'Redux'],
   },
   {
-    appname: "CareCloud",
+    appname: 'CareCloud',
     appimage: carecloud,
     appdesc:
-      "A EMR like app currently with the functionality of being able to schedule a meeting with a doctor and receiving prescriptions from doctors.",
-    appgithublink: "https://github.com/nottherealalanturing/carecloud",
-    applivelink: "https://carecloud-production.up.railway.app/",
-    appstack: ["Ruby", "Rails", "ERB", "CSS", "HTML", "Turbo", "Postgres"],
+      'A EMR like app currently with the functionality of being able to schedule a meeting with a doctor and receiving prescriptions from doctors.',
+    appgithublink: 'https://github.com/nottherealalanturing/carecloud',
+    applivelink: 'https://carecloud-production.up.railway.app/',
+    appstack: ['Ruby', 'Rails', 'ERB', 'CSS', 'HTML', 'Turbo', 'Postgres'],
   },
 ];
 const PortfolioContentArea = () => (
