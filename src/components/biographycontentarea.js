@@ -1,8 +1,10 @@
-import React from "react";
-import { BsGithub, BsLinkedin, BsMedium, BsMailbox } from "react-icons/bs";
-import { FaAngellist } from "react-icons/fa";
-import heroimage from "../assets/images/assadisah.png";
-import styles from "./styles/biocontentarea.module.css";
+import React from 'react';
+import {
+  BsGithub, BsLinkedin, BsMedium, BsMailbox,
+} from 'react-icons/bs';
+import { FaAngellist } from 'react-icons/fa';
+import heroimage from '../assets/images/assadisah.png';
+import styles from './styles/biocontentarea.module.css';
 
 const AboutContentArea = () => (
   <div className={styles.container}>
