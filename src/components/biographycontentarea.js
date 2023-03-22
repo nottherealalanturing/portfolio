@@ -1,10 +1,8 @@
-import React from 'react';
-import {
-  BsGithub, BsLinkedin, BsMedium, BsMailbox,
-} from 'react-icons/bs';
-import { FaAngellist } from 'react-icons/fa';
-import heroimage from '../assets/images/assadisah.png';
-import styles from './styles/biocontentarea.module.css';
+import React from "react";
+import { BsGithub, BsLinkedin, BsMedium, BsMailbox } from "react-icons/bs";
+import { FaAngellist } from "react-icons/fa";
+import heroimage from "../assets/images/assadisah.png";
+import styles from "./styles/biocontentarea.module.css";
 
 const AboutContentArea = () => (
   <div className={styles.container}>
@@ -64,13 +62,38 @@ const AboutContentArea = () => (
       />
       <img
         className="badge"
-        alt="Nodejs"
-        src="https://img.shields.io/badge/nodejs-%23316192.svg?style=for-the-badge&logo=nodejs&logoColor=white"
+        alt="express"
+        src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB"
       />
       <img
         className="badge"
         alt="GraphQL"
-        src="https://img.shields.io/badge/graphql-%23316192.svg?style=for-the-badge&logo=nodejs&logoColor=white"
+        src="https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white"
+      />
+      <img
+        className="badge"
+        alt="Ruby"
+        src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"
+      />
+      <img
+        className="badge"
+        alt="Redux"
+        src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white"
+      />
+      <img
+        className="badge"
+        alt="Next"
+        src="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white"
+      />
+      <img
+        className="badge"
+        alt="Node"
+        src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"
+      />
+      <img
+        className="badge"
+        alt="Mongodb"
+        src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white"
       />
     </div>
     <div className="innercontainer">
