@@ -6,6 +6,7 @@ import {
   pokeyverse,
   portfolioimg,
   carecloud,
+  events,
 } from '../assets/portfolio';
 import PortfolioItem from './portfolioitem';
 import styles from './styles/portfoliocontentarea.module.css';
@@ -63,6 +64,14 @@ const projects = [
     appgithublink: 'https://github.com/nottherealalanturing/carecloud',
     applivelink: 'https://carecloud-production.up.railway.app/',
     appstack: ['Ruby', 'Rails', 'ERB', 'CSS', 'HTML', 'Turbo', 'Postgres'],
+  },
+  {
+    appname: 'Blogger-API',
+    appimage: events,
+    appdesc: 'a RESTful API for managing posts.',
+    appgithublink: 'https://github.com/nottherealalanturing/Blogger-API',
+    applivelink: 'https://blogger-api-production.up.railway.app/api/docs/',
+    appstack: ['Nodejs', 'PassportJS', 'Jest', 'MongoDB'],
   },
 ];
 const PortfolioContentArea = () => (

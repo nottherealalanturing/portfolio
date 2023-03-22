@@ -64,8 +64,13 @@ const AboutContentArea = () => (
       />
       <img
         className="badge"
-        alt="Redux"
-        src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white"
+        alt="Nodejs"
+        src="https://img.shields.io/badge/nodejs-%23316192.svg?style=for-the-badge&logo=nodejs&logoColor=white"
+      />
+      <img
+        className="badge"
+        alt="GraphQL"
+        src="https://img.shields.io/badge/graphql-%23316192.svg?style=for-the-badge&logo=nodejs&logoColor=white"
       />
     </div>
     <div className="innercontainer">
