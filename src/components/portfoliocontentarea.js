@@ -5,7 +5,6 @@ import {
   spacetraveller,
   pokeyverse,
   portfolioimg,
-  carecloud,
   events,
 } from '../assets/portfolio';
 import PortfolioItem from './portfolioitem';
@@ -55,15 +54,6 @@ const projects = [
     appgithublink: 'https://github.com/nottherealalanturing/portfolio',
     applivelink: 'https://www.nottherealalanturing.tech/',
     appstack: ['React', 'Redux'],
-  },
-  {
-    appname: 'CareCloud',
-    appimage: carecloud,
-    appdesc:
-      'A EMR like app currently with the functionality of being able to schedule a meeting with a doctor and receiving prescriptions from doctors.',
-    appgithublink: 'https://github.com/nottherealalanturing/carecloud',
-    applivelink: 'https://carecloud-production.up.railway.app/',
-    appstack: ['Ruby', 'Rails', 'ERB', 'CSS', 'HTML', 'Turbo', 'Postgres'],
   },
   {
     appname: 'Blogger-API',
