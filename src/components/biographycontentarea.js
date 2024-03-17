@@ -1,8 +1,7 @@
+/* eslint-disable object-curly-newline */
 import React from 'react';
-import {
-  BsGithub, BsLinkedin, BsMedium, BsMailbox,
-} from 'react-icons/bs';
-import { FaAngellist } from 'react-icons/fa';
+import { BsGithub, BsLinkedin, BsMedium, BsMailbox } from 'react-icons/bs';
+
 import heroimage from '../assets/images/assadisah.png';
 import styles from './styles/biocontentarea.module.css';
 
@@ -18,24 +17,25 @@ const AboutContentArea = () => (
     <div className="badge-grid">
       <img
         className="badge"
-        alt="HTML"
-        src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"
-      />
-      <img
-        className="badge"
-        alt="CSS"
-        src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
-      />
-      <img
-        className="badge"
-        alt="Ruby"
-        src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"
+        alt="React"
+        src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
       />
       <img
         className="badge"
         alt="JavaScript"
         src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"
       />
+      <img
+        className="badge"
+        alt="Aws Amplify"
+        src="https://img.shields.io/static/v1?style=for-the-badge&message=AWS+Amplify&color=222222&logo=AWS+Amplify&logoColor=FF9900&label="
+      />
+      <img
+        className="badge"
+        alt="Ruby"
+        src="https://img.shields.io/badge/ruby-%23CC342D.svg?style=for-the-badge&logo=ruby&logoColor=white"
+      />
+
       <img
         className="badge"
         alt="Git"
@@ -47,11 +47,7 @@ const AboutContentArea = () => (
         alt="Rails"
         src="https://img.shields.io/badge/rails-%23CC0000.svg?style=for-the-badge&logo=ruby-on-rails&logoColor=white"
       />
-      <img
-        className="badge"
-        alt="React"
-        src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB"
-      />
+
       <img
         className="badge"
         alt="Webpack"
@@ -102,12 +98,11 @@ const AboutContentArea = () => (
       <h3 className={styles.heading}>About Me</h3>
       <p className={styles.paragraph}>
         Hi there, I&apos;m Assad, a full-stack web developer with a passion for
-        creating user-friendly solutions. I specialize in using JavaScript and
-        Ruby to bring UX designs to life and build simple, intuitive products,
-        features, and websites. Take a look at some of my work and experience to
-        see if I&apos;m the right fit for your project. If you&apos;re
-        interested in working together, don&apos;t hesitate to reach out,
-        I&apos;d love to help bring your vision to fruition.
+        open-source projects. I prioritize clean code and user-friendly design
+        to create exceptional digital experiences. Take a look at some of my
+        work and experience to see if I&apos;m the right fit for your project.
+        If you&apos;re interested in working together, don&apos;t hesitate to
+        reach out, I&apos;d love to help bring your vision to fruition.
       </p>
     </div>
 
@@ -143,17 +138,6 @@ const AboutContentArea = () => (
         href="mailto:nottherealalanturing@gmail.com"
       >
         <BsMailbox
-          size="45px"
-          color="#594c4c"
-          className={styles.contacticons}
-        />
-      </a>
-      <a
-        rel="noreferrer"
-        target="_blank"
-        href="https://angel.co/u/nottherealalanturing"
-      >
-        <FaAngellist
           size="45px"
           color="#594c4c"
           className={styles.contacticons}

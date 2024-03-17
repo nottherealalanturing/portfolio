@@ -1,9 +1,8 @@
 import React from 'react';
 import {
-  todo,
+  timelycap,
   cryptobazaar,
-  spacetraveller,
-  pokeyverse,
+  blockparty,
   portfolioimg,
   events,
 } from '../assets/portfolio';
@@ -12,39 +11,22 @@ import styles from './styles/portfoliocontentarea.module.css';
 
 const projects = [
   {
-    appname: 'Todo',
-    appimage: todo,
-    appdesc: 'A minimalist todo app bundled with webpack.',
-    appgithublink: 'https://github.com/nottherealalanturing/todo',
-    applivelink: 'https://nottherealalanturing.github.io/todo/',
-    appstack: ['HTML', 'CSS', 'Webpack', 'JavaScript'],
-  },
-  {
-    appname: 'Crypto Bazaar',
-    appimage: cryptobazaar,
+    appname: 'Timely Capsule',
+    appimage: timelycap,
     appdesc:
-      'A mobile app that uses the Coin-Cap API to display over a 1000 crypto currencies, their current values and graph of their changes over the recent days.',
-    appgithublink: 'https://github.com/nottherealalanturing/cryptobazaar',
-    applivelink: 'https://cryptobazaar.netlify.app/',
-    appstack: ['React', 'Redux', 'React-Router', 'Chart.js'],
+      'Timely Capsule is a unique app that allows users to send messages into the future, creating a connection across different moments in time.',
+    appgithublink: 'https://github.com/nottherealalanturing/timely_capsule',
+    applivelink: 'https://timely-capsule.vercel.app/',
+    appstack: ['Nextjs', 'Firestore', 'Chakraui'],
   },
   {
-    appname: "Space Traveller's Hub",
-    appimage: spacetraveller,
+    appname: 'Block Party',
+    appimage: blockparty,
     appdesc:
-      'A web app that consumes SpaceX API to display the list of available Rockets and Missions. Users can reserve missions or rockets.',
-    appgithublink:
-      'https://github.com/nottherealalanturing/space-travelers-hub',
-    applivelink: 'https://space-travels-app.netlify.app/',
-    appstack: ['React', 'Redux', 'React-Router', 'Sass'],
-  },
-  {
-    appname: 'Pokeyverse',
-    appimage: pokeyverse,
-    appdesc: 'A website bundled with web pack that renders pokemon characters.',
-    appgithublink: 'https://nottherealalanturing.github.io/Pokeyverse',
-    applivelink: 'https://nottherealalanturing.github.io/Pokeyverse/',
-    appstack: ['HTML', 'CSS', 'Axios', 'JavaScript'],
+      'Block Party is a neighborhood app that meets all neighborhood needs in one place - bringing together people who share interests, and facilitate local support and collaborations.',
+    appgithublink: 'https://github.com/adedotxn/block-party',
+    applivelink: 'https://the-blockparty.vercel.app/invite/P15Ry1',
+    appstack: ['Typescript', 'Nextjs', 'React-Router', 'Chart.js'],
   },
   {
     appname: 'Portfolio',
@@ -54,6 +36,15 @@ const projects = [
     appgithublink: 'https://github.com/nottherealalanturing/portfolio',
     applivelink: 'https://www.nottherealalanturing.tech/',
     appstack: ['React', 'Redux'],
+  },
+  {
+    appname: 'Crypto Bazaar',
+    appimage: cryptobazaar,
+    appdesc:
+      'A mobile web app that uses the Coin-Cap API to display over a 1000 crypto currencies, their current values and graph of their changes over the recent days.',
+    appgithublink: 'https://github.com/nottherealalanturing/cryptobazaar',
+    applivelink: 'https://cryptobazaar.netlify.app/',
+    appstack: ['React', 'Redux', 'React-Router', 'Chart.js'],
   },
   {
     appname: 'Blogger-API',
