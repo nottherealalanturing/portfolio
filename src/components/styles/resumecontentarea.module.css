@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.topbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+  margin-left: 2px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+.contacticons {
+  width: 140px;
+  height: 140px;
+  color: #594c4c;
+}
+
+.resumeframe {
+  flex-grow: 1;
+}

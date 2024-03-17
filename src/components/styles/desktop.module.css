@@ -1,0 +1,16 @@
+.desktopArea {
+  border: 1px solid #000;
+  width: 100%;
+  height: calc(100% - 36px);
+  background-color: #008080;
+  display: block;
+  position: relative;
+}
+
+.iconlist {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px;
+}

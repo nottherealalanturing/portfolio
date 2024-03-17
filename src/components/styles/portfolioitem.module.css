@@ -1,0 +1,49 @@
+.card {
+  display: flex;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.267);
+  width: 300px;
+  height: 300px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.left {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  height: 100%;
+}
+
+.thumb {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+.stack {
+  padding: 3px;
+  background-color: #2a5f55;
+  color: #fff;
+  border-radius: 2px;
+  font-size: 14px;
+  width: fit-content;
+  float: left;
+  margin: 2px;
+}
+
+.applinks {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}

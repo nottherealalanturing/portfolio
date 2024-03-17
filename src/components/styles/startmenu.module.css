@@ -1,0 +1,41 @@
+.container {
+  position: absolute;
+  left: 2px;
+  bottom: 37px;
+  background-color: #fff;
+  border-color: #fff gray gray #fff;
+  pointer-events: none;
+  z-index: 1;
+  border-width: 1px 0 1px 1px;
+  border-style: solid;
+  width: 150px;
+  height: 245px;
+  display: flex;
+  padding: 2px;
+}
+
+.sidebar {
+  width: 25px;
+  background: #7b7d7b;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sidebarimg {
+  width: 18px;
+}
+
+.listcontainer {
+  margin-left: 1px;
+  list-style: none;
+  pointer-events: all;
+}
+
+.seperator {
+  background-color: #7b7d7b;
+  width: 125px;
+  height: 1px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}

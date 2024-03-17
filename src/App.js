@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import { useMediaQuery } from 'react-responsive';
+import Desktop from './components/desktop';
+import Taskbar from './components/taskbar';
+import MobileVersion from './components/mobileversion';
 
 function App() {
+  const isBigScreen = useMediaQuery({ query: '(min-width: 501px)' });
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 500px)' });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {isBigScreen && (
+        <div className="windowsarea" onContextMenu={(e) => e.preventDefault()}>
+          <Desktop />
+          <Taskbar />
+        </div>
+      )}
+
+      {isTabletOrMobile && <MobileVersion />}
+    </>
   );
 }
 
