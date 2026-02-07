@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --win-bg: #c0c0c0;
+  --win-teal: #008080;
+  --win-light: #fafafa;
+  --win-dark: #5a5a5a;
+  --win-mid: #808080;
+  --win-blue: #000080;
+  --win-blue-light: #1084d0;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    font-family: var(--font-ms-sans), ui-sans-serif, system-ui, sans-serif;
+    background-color: var(--win-teal);
+    color: #000;
+    line-height: 1;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@layer components {
+  .win-panel {
+    background-color: var(--win-bg);
+    border-top: 2px solid var(--win-light);
+    border-left: 2px solid var(--win-light);
+    border-right: 2px solid var(--win-mid);
+    border-bottom: 2px solid var(--win-mid);
+    box-shadow: 0.5px 0.5px 0 #000;
+  }
+
+  .win-panel-inset {
+    background-color: #fff;
+    border-top: 1px solid var(--win-dark);
+    border-left: 1px solid var(--win-dark);
+    border-right: 1px solid var(--win-light);
+    border-bottom: 1px solid var(--win-light);
+  }
+
+  .win-titlebar {
+    background: linear-gradient(90deg, var(--win-blue), var(--win-blue-light));
+    color: #fff;
+  }
+
+  .win-titlebar-inactive {
+    background: linear-gradient(90deg, #4b4b4b, #9c9c9c);
+    color: #fff;
+  }
+
+  .win-button {
+    background-color: var(--win-bg);
+    border-top: 2px solid var(--win-light);
+    border-left: 2px solid var(--win-light);
+    border-right: 2px solid var(--win-dark);
+    border-bottom: 2px solid var(--win-dark);
+    box-shadow: 0.5px 0.5px 0 #000;
+  }
+
+  .win-button-pressed {
+    background: repeating-conic-gradient(#bdbebd 0 25%, #fff 0 50%) 50%/2px 2px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    border-right: 1px solid var(--win-light);
+    border-bottom: 1px solid var(--win-light);
+    box-shadow: 0.5px 0.5px 0 #000;
+  }
+
+  .win-divider {
+    width: 0;
+    border-left: 1px solid var(--win-mid);
+    border-right: 1px solid var(--win-light);
+  }
+
+  .win-input {
+    background-color: #fff;
+    border-top: 1px solid var(--win-dark);
+    border-left: 1px solid var(--win-dark);
+    border-right: 1px solid var(--win-light);
+    border-bottom: 1px solid var(--win-light);
+    padding: 4px 6px;
+    font-size: 14px;
+  }
+}
+
+@layer utilities {
+  .image-pixel {
+    image-rendering: pixelated;
+  }
+
+  .text-shadow-win {
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .wallpaper-teal {
+    background-color: var(--win-teal);
+  }
+
+  .wallpaper-sky {
+    background-image:
+      linear-gradient(180deg, #78b9ff 0%, #b8dcff 45%, #dff2ff 100%),
+      radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.7) 0 60px, transparent 65px),
+      radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.6) 0 80px, transparent 85px);
+    background-blend-mode: screen;
+  }
+
+  .wallpaper-grid {
+    background-color: #0a7f7f;
+    background-image:
+      linear-gradient(0deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+}
+
+@keyframes boot {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}

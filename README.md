@@ -5,9 +5,10 @@
 
 ## Built With
 
-- React
-- Redux
-- CSS.
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- Redux Toolkit
 
 ## Live Demo
 
@@ -17,8 +18,8 @@ To get a local copy up and running follow these steps:
 
 ### Prerequisites
 
-- React 18
-- Redux Toolkit
+- Node.js 18+
+- npm
 - Git
 
 ### Usage
@@ -33,10 +34,19 @@ npm install
 
 ```
 
-Start server with:
+Create a `.env.local` (optional) for EmailJS + GTM:
 
 ```
-npm start
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=
+NEXT_PUBLIC_GTM_ID=GTM-M9NC9LX
+```
+
+Start the dev server with:
+
+```
+npm run dev
 
 ```
 
